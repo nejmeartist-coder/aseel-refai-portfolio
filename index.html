@@ -86,6 +86,17 @@
   .tag{font-size:.77rem;font-weight:600;color:var(--navy);background:#fff;
     border:1px solid var(--line);padding:6px 12px;border-radius:999px}
   .cta-row{display:flex;flex-wrap:wrap;gap:12px}
+
+  /* ---------- About / bio ---------- */
+  .about{display:grid;grid-template-columns:1fr 280px;gap:28px;align-items:start}
+  .about-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;box-shadow:var(--shadow)}
+  .about-card .name{font-size:1.2rem;font-weight:800;color:var(--navy);margin:0 0 .2em}
+  .about-card .title{font-size:.92rem;color:var(--teal);font-weight:700;margin:0 0 1em}
+  .about-meta{list-style:none;margin:0;padding:0;font-size:.9rem}
+  .about-meta li{margin:.55em 0;color:var(--gray)}
+  .about-meta strong{color:var(--navy)}
+  .about-meta a{font-weight:600}
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;
     padding:12px 20px;border-radius:10px;border:1px solid transparent;cursor:pointer;transition:.15s}
   .btn-primary{background:var(--navy);color:#fff}
@@ -208,7 +219,7 @@
   @media(max-width:680px){
     h2{font-size:1.42rem}
     .hero h1{font-size:1.95rem}
-    .g2,.g3,.g4,.addie,.snap,.form-grid,.checklist{grid-template-columns:1fr}
+    .g2,.g3,.g4,.addie,.snap,.form-grid,.checklist,.about{grid-template-columns:1fr}
     .snap .row:nth-child(odd){border-right:0}
     .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;
       flex-direction:column;padding:10px 16px 16px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
@@ -229,6 +240,7 @@
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰ Menu</button>
     <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
       <a href="#snapshot">Snapshot</a>
       <a href="#challenge">Challenge</a>
       <a href="#goals">Goals</a>
@@ -263,6 +275,34 @@
     </div>
   </div>
 </header>
+
+<!-- ===================== ABOUT / BIO ===================== -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">About the Designer</span>
+      <h2>Hi, I'm Aseel Refai</h2>
+      <p class="lead">Instructional designer and learning technology specialist focused on onboarding, operations training, and measurable learner readiness.</p>
+    </div>
+    <div class="about">
+      <div>
+        <p>I'm an instructional designer and learning technology specialist based in Grapevine, Texas. I design blended learning experiences for operations-heavy environments—especially healthcare distribution and supply chain teams where new hires need to ramp quickly on order flow, documentation standards, customer communication, and escalation paths.</p>
+        <p>My work spans the full instructional design lifecycle: needs analysis, curriculum mapping, facilitator and learner guides, eLearning development, LMS workflow design, manager reinforcement tools, and Kirkpatrick-aligned evaluation. I use ADDIE, adult learning principles, and scenario-based practice to connect training activities to real on-the-job performance.</p>
+        <p>This portfolio case study demonstrates how I approach a common onboarding challenge—standardizing ramp-up for Customer Experience, Supply Chain Operations, Order Management, and related roles—through a structured 30-60-90 day curriculum.</p>
+      </div>
+      <aside class="about-card">
+        <p class="name">Aseel Refai</p>
+        <p class="title">Instructional Designer &amp; Learning Technology Specialist</p>
+        <ul class="about-meta">
+          <li><strong>Location:</strong> Grapevine, TX</li>
+          <li><strong>Focus:</strong> Onboarding, eLearning, LMS, operations training</li>
+          <li><strong>Tools:</strong> Articulate Rise &amp; Storyline, Canva, Teams, Zoom</li>
+          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/aseel-refai-820b36269" target="_blank" rel="noopener noreferrer">aseel-refai-820b36269</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== SNAPSHOT ===================== -->
 <section class="section" id="snapshot">
