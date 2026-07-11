@@ -110,6 +110,14 @@
   .coming-soon{max-width:560px;margin:80px auto;text-align:center;padding:48px 32px}
   .coming-soon h2{margin-bottom:.35em}
   .coming-soon p{color:var(--gray);margin:0}
+  .rise-project{padding:36px 0 48px}
+  .rise-project .head{margin-bottom:22px}
+  .rise-embed-wrap{margin-top:22px;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+  .rise-embed{width:100%;min-height:78vh;border:0;display:block;background:var(--bg-alt)}
+  .rise-fallback{padding:18px 20px;border-top:1px solid var(--line);background:var(--bg-alt);
+    display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+  .rise-fallback p{margin:0;color:var(--gray);font-size:.92rem;max-width:52ch}
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;
     padding:12px 20px;border-radius:10px;border:1px solid transparent;cursor:pointer;transition:.15s}
   .btn-primary{background:var(--navy);color:#fff}
@@ -259,7 +267,7 @@
     <div class="wrap">
       <div class="portfolio-tabs" role="tablist" aria-label="Portfolio projects">
         <button class="portfolio-tab-btn" type="button" role="tab" data-portfolio="project-1" aria-selected="true" aria-controls="portfolio-project-1">Healthcare Supply Chain Onboarding</button>
-        <button class="portfolio-tab-btn is-soon" type="button" role="tab" data-portfolio="project-2" aria-selected="false" aria-controls="portfolio-project-2">Coming Soon</button>
+        <button class="portfolio-tab-btn" type="button" role="tab" data-portfolio="project-2" aria-selected="false" aria-controls="portfolio-project-2">Rise 360 eLearning</button>
         <button class="portfolio-tab-btn is-soon" type="button" role="tab" data-portfolio="project-3" aria-selected="false" aria-controls="portfolio-project-3">Coming Soon</button>
       </div>
     </div>
@@ -710,13 +718,26 @@
 
   </div><!-- /portfolio-project-1 -->
 
-  <!-- ===================== PROJECT 2: COMING SOON ===================== -->
+  <!-- ===================== PROJECT 2: RISE 360 LESSON ===================== -->
   <div id="portfolio-project-2" class="portfolio-panel" role="tabpanel" hidden>
-    <div class="wrap">
-      <div class="card coming-soon">
-        <span class="eyebrow">Project 2</span>
-        <h2>Coming Soon</h2>
-        <p>Another instructional design case study will be added here.</p>
+    <div class="wrap rise-project">
+      <div class="head">
+        <span class="eyebrow">Rise 360 · eLearning Sample</span>
+        <h2>Interactive Rise 360 Lesson</h2>
+        <p class="lead">A self-paced eLearning module built in Articulate Rise 360. Use the button below to launch the lesson, or view it inline once the web export is hosted on this site.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://rise.articulate.com/share/k-UGesU7PC9vOlzqWRQNZug2xURrZFo5" target="_blank" rel="noopener noreferrer">Launch Lesson</a>
+      </div>
+      <div class="rise-embed-wrap">
+        <iframe class="rise-embed" title="Rise 360 eLearning lesson"
+          src="rise-lesson/index.html"
+          loading="lazy"
+          allow="fullscreen"></iframe>
+        <div class="rise-fallback">
+          <p>If the lesson does not appear above, click Launch Lesson. To embed it here, publish the course for web in Rise 360 and upload the exported files to the <code>rise-lesson/</code> folder in this repository.</p>
+          <a class="btn btn-ghost" href="https://rise.articulate.com/share/k-UGesU7PC9vOlzqWRQNZug2xURrZFo5" target="_blank" rel="noopener noreferrer">Open in Rise 360</a>
+        </div>
       </div>
     </div>
   </div>
