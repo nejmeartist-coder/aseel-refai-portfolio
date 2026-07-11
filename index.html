@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Healthcare Supply Chain Onboarding Curriculum | Instructional Design Portfolio</title>
-<meta name="description" content="Independent instructional design portfolio case study featuring a 30-60-90 day onboarding curriculum for healthcare distribution and supply chain operations." />
+<title>Aseel Refai | Instructional Design Portfolio</title>
+<meta name="description" content="Instructional design portfolio by Aseel Refai — corporate learning, technical content review, and onboarding curriculum case studies." />
 <!-- ============================================================
      Portfolio case study content
      Single-file site: HTML + CSS + vanilla JS. No dependencies.
@@ -87,16 +87,29 @@
     border:1px solid var(--line);padding:6px 12px;border-radius:999px}
   .cta-row{display:flex;flex-wrap:wrap;gap:12px}
 
-  /* ---------- About / bio ---------- */
-  .about{display:grid;grid-template-columns:1fr 280px;gap:28px;align-items:start}
-  .about-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-    padding:22px;box-shadow:var(--shadow)}
-  .about-card .name{font-size:1.2rem;font-weight:800;color:var(--navy);margin:0 0 .2em}
-  .about-card .title{font-size:.92rem;color:var(--teal);font-weight:700;margin:0 0 1em}
-  .about-meta{list-style:none;margin:0;padding:0;font-size:.9rem}
-  .about-meta li{margin:.55em 0;color:var(--gray)}
-  .about-meta strong{color:var(--navy)}
-  .about-meta a{font-weight:600}
+  /* ---------- Portfolio shell ---------- */
+  .portfolio-hero{background:
+      radial-gradient(900px 320px at 80% -20%,rgba(18,163,163,.12),transparent 60%),
+      linear-gradient(180deg,#f1f6fb 0%,#ffffff 100%);
+    padding:42px 0 28px;border-bottom:1px solid var(--line)}
+  .portfolio-hero h1{font-size:1.85rem;margin-bottom:.45em}
+  .portfolio-bio{font-size:1.02rem;color:var(--gray);max-width:68ch;margin:0}
+  .portfolio-bio strong{color:var(--navy)}
+  .portfolio-linkedin{margin:.75em 0 0;font-size:.95rem}
+  .portfolio-linkedin a{font-weight:700}
+  .portfolio-panel .nav{top:68px}
+  .portfolio-tabbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);
+    backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--line);padding:14px 0}
+  .portfolio-tabs{display:flex;flex-wrap:wrap;gap:10px}
+  .portfolio-tab-btn{border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:700;
+    padding:12px 18px;border-radius:10px;cursor:pointer;font-size:.9rem}
+  .portfolio-tab-btn[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .portfolio-tab-btn.is-soon[aria-selected="false"]{color:var(--gray)}
+  .portfolio-panel{display:none}
+  .portfolio-panel.active{display:block}
+  .coming-soon{max-width:560px;margin:80px auto;text-align:center;padding:48px 32px}
+  .coming-soon h2{margin-bottom:.35em}
+  .coming-soon p{color:var(--gray);margin:0}
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;
     padding:12px 20px;border-radius:10px;border:1px solid transparent;cursor:pointer;transition:.15s}
   .btn-primary{background:var(--navy);color:#fff}
@@ -219,7 +232,7 @@
   @media(max-width:680px){
     h2{font-size:1.42rem}
     .hero h1{font-size:1.95rem}
-    .g2,.g3,.g4,.addie,.snap,.form-grid,.checklist,.about{grid-template-columns:1fr}
+    .g2,.g3,.g4,.addie,.snap,.form-grid,.checklist{grid-template-columns:1fr}
     .snap .row:nth-child(odd){border-right:0}
     .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;
       flex-direction:column;padding:10px 16px 16px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
@@ -229,6 +242,31 @@
 </style>
 </head>
 <body>
+
+<!-- ===================== PORTFOLIO HEADER ===================== -->
+<header class="portfolio-hero">
+  <div class="wrap">
+    <span class="eyebrow">Instructional Design Portfolio</span>
+    <h1>Aseel Refai</h1>
+    <p class="portfolio-bio">Hi, I'm <strong>Aseel Refai</strong>, an Instructional Designer specializing in corporate learning and technical content review.</p>
+    <p class="portfolio-linkedin"><a href="https://linkedin.com/in/aseel-refai-820b36269" target="_blank" rel="noopener noreferrer">LinkedIn →</a></p>
+  </div>
+</header>
+
+<!-- ===================== PORTFOLIO TABS ===================== -->
+<div class="portfolio-shell">
+  <div class="portfolio-tabbar">
+    <div class="wrap">
+      <div class="portfolio-tabs" role="tablist" aria-label="Portfolio projects">
+        <button class="portfolio-tab-btn" type="button" role="tab" data-portfolio="project-1" aria-selected="true" aria-controls="portfolio-project-1">Healthcare Supply Chain Onboarding</button>
+        <button class="portfolio-tab-btn is-soon" type="button" role="tab" data-portfolio="project-2" aria-selected="false" aria-controls="portfolio-project-2">Coming Soon</button>
+        <button class="portfolio-tab-btn is-soon" type="button" role="tab" data-portfolio="project-3" aria-selected="false" aria-controls="portfolio-project-3">Coming Soon</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PROJECT 1: CASE STUDY ===================== -->
+  <div id="portfolio-project-1" class="portfolio-panel active" role="tabpanel">
 
 <!-- ===================== STICKY NAV ===================== -->
 <nav class="nav">
@@ -240,7 +278,6 @@
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰ Menu</button>
     <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
       <a href="#snapshot">Snapshot</a>
       <a href="#challenge">Challenge</a>
       <a href="#goals">Goals</a>
@@ -275,34 +312,6 @@
     </div>
   </div>
 </header>
-
-<!-- ===================== ABOUT / BIO ===================== -->
-<section class="section" id="about">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">About the Designer</span>
-      <h2>Hi, I'm Aseel Refai</h2>
-      <p class="lead">Instructional designer and learning technology specialist focused on onboarding, operations training, and measurable learner readiness.</p>
-    </div>
-    <div class="about">
-      <div>
-        <p>I'm an instructional designer and learning technology specialist based in Grapevine, Texas. I design blended learning experiences for operations-heavy environments—especially healthcare distribution and supply chain teams where new hires need to ramp quickly on order flow, documentation standards, customer communication, and escalation paths.</p>
-        <p>My work spans the full instructional design lifecycle: needs analysis, curriculum mapping, facilitator and learner guides, eLearning development, LMS workflow design, manager reinforcement tools, and Kirkpatrick-aligned evaluation. I use ADDIE, adult learning principles, and scenario-based practice to connect training activities to real on-the-job performance.</p>
-        <p>This portfolio case study demonstrates how I approach a common onboarding challenge—standardizing ramp-up for Customer Experience, Supply Chain Operations, Order Management, and related roles—through a structured 30-60-90 day curriculum.</p>
-      </div>
-      <aside class="about-card">
-        <p class="name">Aseel Refai</p>
-        <p class="title">Instructional Designer &amp; Learning Technology Specialist</p>
-        <ul class="about-meta">
-          <li><strong>Location:</strong> Grapevine, TX</li>
-          <li><strong>Focus:</strong> Onboarding, eLearning, LMS, operations training</li>
-          <li><strong>Tools:</strong> Articulate Rise &amp; Storyline, Canva, Teams, Zoom</li>
-          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/aseel-refai-820b36269" target="_blank" rel="noopener noreferrer">aseel-refai-820b36269</a></li>
-        </ul>
-      </aside>
-    </div>
-  </div>
-</section>
 
 <!-- ===================== SNAPSHOT ===================== -->
 <section class="section" id="snapshot">
@@ -699,12 +708,37 @@
   </div>
 </section>
 
-<!-- ===================== FOOTER (project context stated once) ===================== -->
+  </div><!-- /portfolio-project-1 -->
+
+  <!-- ===================== PROJECT 2: COMING SOON ===================== -->
+  <div id="portfolio-project-2" class="portfolio-panel" role="tabpanel" hidden>
+    <div class="wrap">
+      <div class="card coming-soon">
+        <span class="eyebrow">Project 2</span>
+        <h2>Coming Soon</h2>
+        <p>Another instructional design case study will be added here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PROJECT 3: COMING SOON ===================== -->
+  <div id="portfolio-project-3" class="portfolio-panel" role="tabpanel" hidden>
+    <div class="wrap">
+      <div class="card coming-soon">
+        <span class="eyebrow">Project 3</span>
+        <h2>Coming Soon</h2>
+        <p>Another instructional design case study will be added here.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /portfolio-shell -->
+
+<!-- ===================== FOOTER ===================== -->
 <footer>
   <div class="wrap">
     <p><strong>Healthcare Supply Chain New-Hire Onboarding Curriculum</strong> — Independent instructional design portfolio case study.</p>
-    <p>Designed by <strong>Aseel Refai</strong>, Instructional Designer &amp; Learning Technology Specialist.</p>
-    <p>Aseel Refai | Grapevine, TX | linkedin.com/in/aseel-refai-820b36269</p>
+    <p>Designed by <strong>Aseel Refai</strong> · <a href="https://linkedin.com/in/aseel-refai-820b36269" target="_blank" rel="noopener noreferrer" style="color:#7fd6d6">LinkedIn</a></p>
     <p class="context">This portfolio case study was independently created to demonstrate instructional design, onboarding
       curriculum design, LMS administration, learning operations, and evaluation capabilities. It is modeled on common
       healthcare distribution and supply chain onboarding needs in the Dallas–Fort Worth market and does not include
@@ -721,14 +755,34 @@
     if (e.target.tagName === 'A') navLinks.classList.remove('open');
   });
 
-  /* ---------- Tabs (Artifact Preview) ---------- */
-  var tabBtns = document.querySelectorAll('.tab-btn');
-  tabBtns.forEach(function(btn){
+  /* ---------- Portfolio project tabs ---------- */
+  var portfolioTabBtns = document.querySelectorAll('.portfolio-tab-btn');
+  portfolioTabBtns.forEach(function(btn){
     btn.addEventListener('click', function(){
-      tabBtns.forEach(function(b){ b.setAttribute('aria-selected','false'); });
+      portfolioTabBtns.forEach(function(b){ b.setAttribute('aria-selected','false'); });
       btn.setAttribute('aria-selected','true');
-      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
-      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      document.querySelectorAll('.portfolio-panel').forEach(function(p){
+        p.classList.remove('active');
+        p.hidden = true;
+      });
+      var panel = document.getElementById('portfolio-' + btn.dataset.portfolio);
+      panel.classList.add('active');
+      panel.hidden = false;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  /* ---------- Tabs (Artifact Preview) ---------- */
+  document.querySelectorAll('.tabs').forEach(function(tabGroup){
+    var tabBtns = tabGroup.querySelectorAll('.tab-btn');
+    tabBtns.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        tabBtns.forEach(function(b){ b.setAttribute('aria-selected','false'); });
+        btn.setAttribute('aria-selected','true');
+        var panelWrap = tabGroup.parentElement;
+        panelWrap.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      });
     });
   });
 
