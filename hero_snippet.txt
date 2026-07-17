@@ -1,0 +1,15 @@
+<section id="hero" class="hero-container">
+  <div class="hero-content">
+    <h1>Aseel Al-Refai</h1>
+    <h2>Instructional Designer & Curriculum Strategist</h2>
+    <p class="hero-tagline">
+      Bridging the gap between cognitive science and visual storytelling. Leveraging an MA in Curriculum Design and a foundation in Fine Arts to engineer high-engagement learning experiences that shift corporate performance.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">MA, Curriculum Design</span>
+      <span class="badge">Fine Arts Background</span>
+      <span class="badge">E-Learning Developer</span>
+    </div>
+    <a href="#projects" class="btn-primary">View Case Studies</a>
+  </div>
+</section>
