@@ -3,62 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aseel Refai | Corporate Instructional Designer & Learning Architect</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Aseel Refai | Learning Experience Architect & Visual Storyteller</title>
+    <style>
+        :root {
+            --bg-canvas: #fcfbf9;
+            --text-dark: #111215;
+            --text-muted: #53565a;
+            --accent-terracotta: #b85a3a;
+            --accent-moss: #2d4a3e;
+            --border-light: #e5e2dd;
+            --font-display: "Times New Roman", Times, Baskerville, Georgia, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-canvas); color: var(--text-dark); font-family: var(--font-sans); line-height: 1.6; padding: 3rem 2rem; max-width: 1200px; margin: 0 auto; }
+
+        header { padding: 8rem 0 4rem 0; border-bottom: 2px solid var(--text-dark); }
+        .brand-title { font-family: var(--font-display); font-size: 4.5rem; font-weight: 400; letter-spacing: -0.02em; line-height: 1.0; margin-bottom: 1.5rem; }
+        .subtitle { font-family: var(--font-sans); font-size: 1.25rem; text-transform: uppercase; tracking: 0.05em; color: var(--accent-terracotta); font-weight: 600; margin-bottom: 2rem; }
+        .hero-statement { font-family: var(--font-display); font-size: 2rem; font-style: italic; font-weight: 400; line-height: 1.4; max-width: 900px; color: var(--text-dark); margin-bottom: 3rem; }
+        .hero-statement strong { font-style: normal; color: var(--accent-moss); font-weight: 400; border-bottom: 1px solid var(--accent-moss); }
+
+        .cta-group { display: flex; gap: 1.5rem; }
+        .btn { display: inline-block; padding: 1rem 2rem; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: all 0.2s ease; text-transform: uppercase; tracking: 0.05em; border-radius: 2px; }
+        .btn-primary { background-color: var(--text-dark); color: white; }
+        .btn-primary:hover { background-color: var(--accent-terracotta); }
+        .btn-secondary { border: 1px solid var(--text-dark); color: var(--text-dark); }
+        .btn-secondary:hover { background-color: #f4f0ea; }
+
+        .dashboard-section { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; padding: 6rem 0; border-bottom: 1px solid var(--border-light); }
+        .section-label { font-family: var(--font-sans); font-size: 0.85rem; text-transform: uppercase; tracking: 0.1em; color: var(--text-muted); font-weight: 600; }
+        .capabilities-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .cap-card h3 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-bottom: 1rem; color: var(--accent-moss); }
+        .cap-card p { color: var(--text-muted); font-size: 1rem; }
+
+        .portfolio-section { padding: 6rem 0; }
+        .case-wrapper { display: flex; flex-direction: column; gap: 6rem; margin-top: 4rem; }
+        .case-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-bottom: 6rem; border-bottom: 1px solid var(--border-light); }
+        .case-row:last-child { border-bottom: none; }
+        .case-visual-placeholder { background: #f0ede7; border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-style: italic; color: var(--text-muted); min-height: 350px; position: relative; }
+        .case-visual-placeholder::before { content: "🎨"; font-size: 3rem; opacity: 0.3; }
+        .case-content { display: flex; flex-direction: column; justify-content: center; }
+        .case-num { font-family: var(--font-sans); font-size: 0.85rem; color: var(--accent-terracotta); font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; }
+        .case-content h3 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 400; line-height: 1.2; margin-bottom: 1.5rem; }
+        .case-content p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; }
+        .case-link { font-family: var(--font-sans); color: var(--text-dark); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; border-bottom: 2px solid var(--text-dark); padding-bottom: 4px; align-self: flex-start; }
+        .case-link:hover { color: var(--accent-terracotta); border-color: var(--accent-terracotta); }
+
+        footer { padding: 6rem 0 2rem 0; display: flex; justify-content: space-between; border-top: 2px solid var(--text-dark); font-size: 0.9rem; color: var(--text-muted); }
+        footer a { color: var(--text-dark); text-decoration: none; font-weight: 500; }
+
+        @media (max-width: 900px) {
+            .dashboard-section, .case-row { grid-template-columns: 1fr; gap: 2rem; }
+            body { padding: 1.5rem; }
+            .brand-title { font-size: 3rem; }
+            header { padding: 4rem 0; }
+        }
+    </style>
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-container">
-            <h1>Aseel Refai</h1>
-            <h2>Instructional Designer & Performance Consultant</h2>
-            <p class="tagline">Bridging the gap between <strong>Cognitive Psychology (MA ELET)</strong> and <strong>Visual Storytelling (Fine Arts)</strong> to engineer measurable corporate training programs that scale.</p>
-            <div class="cta-group">
-                <a href="#featured-work" class="btn btn-primary">Explore Case Studies</a>
-                <a href="mailto:refai0511@gmail.com" class="btn btn-secondary">Contact Strategy</a>
-            </div>
+
+    <header>
+        <div class="subtitle">Instructional Designer & Learning Experience Architect</div>
+        <h1 class="brand-title">Aseel Refai</h1>
+        <p class="hero-statement">
+            Bridging the structural discipline of <strong>Cognitive Psychology (MA ELET)</strong> with the spatial clarity of <strong>Visual Storytelling (Fine Arts)</strong> to shape immersive corporate training experiences.
+        </p>
+        <div class="cta-group">
+            <a href="#work" class="btn btn-primary">Explore Portfolio Gallery</a>
+            <a href="mailto:refai0511@gmail.com" class="btn btn-secondary">Initiate Strategy Chat</a>
         </div>
     </header>
 
-    <section class="value-proposition">
-        <div class="prop-card">
-            <h3>🎨 Visual UX Architecture</h3>
-            <p>Applying fine art design principles to strip away UI clutter, systematically minimizing cognitive load and optimizing learner long-term retention.</p>
-        </div>
-        <div class="prop-card">
-            <h3>🔬 ELET Theory & LMS Data</h3>
-            <p>Leveraging advanced instructional scaffolding frameworks (ADDIE, Gagné) to align training outputs with strict business performance metrics.</p>
-        </div>
-    </section>
-    <section class="value-proposition" style="padding-top: 1rem; padding-bottom: 2rem;">
-        <div class="prop-card" style="grid-column: 1 / -1;">
-            <h3 style="color: var(--accent-color);">🛠️ Enterprise Skill Inventory</h3>
-            <p style="margin-top: 0.5rem; font-size: 1rem; color: var(--text-main);">
-                <strong>Core Methodology:</strong> ADDIE Model &bull; Backward Design &bull; Action Mapping &bull; Kirkpatrick L1-L4 Evaluation Data Tracking <br>
-                <strong>Authoring Systems:</strong> Articulate Storyline 360 &bull; Rise 360 &bull; SCORM Deployment Pipelines &bull; LMS Administration Sandboxes
-            </p>
+    <section class="dashboard-section">
+        <div class="section-label">Core Philosophy & Systems</div>
+        <div class="capabilities-grid">
+            <div class="cap-card">
+                <h3>Visual Architecture</h3>
+                <p>Applying structural design principles to strip away decorative interface noise. Systematically minimizing learner cognitive fatigue while maximizing structural knowledge acquisition.</p>
+            </div>
+            <div class="cap-card">
+                <h3>Pedagogical Scaffolding</h3>
+                <p>Leveraging formal instructional frameworks (ADDIE, Gagné) to translate complex data pipelines into intuitive, measurable learning paths that drive business performance metrics.</p>
+            </div>
         </div>
     </section>
 
-    <main id="featured-work" class="portfolio-grid">
-        <h2 class="section-title">Featured Case Studies</h2>
+    <main id="work" class="portfolio-section">
+        <div class="section-label">Selected Exhibition Case Studies</div>
         
-        <article class="case-card">
-            <div class="case-meta">Case Study 01 • Operations Onboarding</div>
-            <h3>Global E-Commerce Operations: 30-60-90 Day Curriculum</h3>
-            <p>Standardizing new-hire ramp-up times across complex supply chain and order flow matrixes using interactive Articulate scenarios.</p>
-            <a href="case-studies/ecommerce-onboarding.html" class="case-link">View Design Narrative &rarr;</a>
-        </article>
+        <div class="case-wrapper">
+            <article class="case-row">
+                <div class="case-visual-placeholder"></div>
+                <div class="case-content">
+                    <div class="case-num">Case Study I &bull; Global Operations</div>
+                    <h3>E-Commerce New-Hire Onboarding Matrix</h3>
+                    <p>Standardizing ramp-up velocities across complex global supply chain matrixes through phased 30-60-90 day interactive scenario training tracks.</p>
+                    <a href="case-studies/ecommerce-onboarding.html" class="case-link">View Gallery Narrative &rarr;</a>
+                </div>
+            </article>
 
-        <article class="case-card">
-            <div class="case-meta">Case Study 02 • Mobile Learning</div>
-            <h3>Visual Literacy Architecture: Mobile Training Simulation</h3>
-            <p>A mobile-first educational prototype leveraging progressive disclosure and gesture-led annotations to train complex visual analysis.</p>
-            <a href="case-studies/visual-literacy.html" class="case-link">View Design Narrative &rarr;</a>
-        </article>
+            <article class="case-row">
+                <div class="case-visual-placeholder"></div>
+                <div class="case-content">
+                    <div class="case-num">Case Study II &bull; Mobile Simulation</div>
+                    <h3>Visual Literacy Architecture Module</h3>
+                    <p>A mobile-first instructional prototype mapping progressive disclosure models and gesture-led interactions to train complex spatial and visual analytics.</p>
+                    <a href="case-studies/visual-literacy.html" class="case-link">View Gallery Narrative &rarr;</a>
+                </div>
+            </article>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Aseel Refai • refai0511@gmail.com • Dallas-Fort Worth, TX</p>
+        <div>&copy; 2026 Aseel Refai &bull; Dallas-Fort Worth, TX</div>
+        <div><a href="mailto:refai0511@gmail.com">refai0511@gmail.com</a> &bull; <a href="https://linkedin.com">LinkedIn Profile</a></div>
     </footer>
+
 </body>
 </html>
