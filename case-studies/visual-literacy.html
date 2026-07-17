@@ -3,114 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: Visual Literacy Simulation | Aseel Refai</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Case Study II | Visual Literacy Architecture Module</title>
     <style>
-        .back-nav { margin: 2rem 0; font-weight: 500; }
-        .back-nav a { color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--text-main); }
-        .case-header { padding: 4rem 0 2rem 0; border-bottom: 1px solid var(--border-color); }
-        .case-header h1 { font-size: 2.75rem; line-height: 1.2; margin-bottom: 1rem; }
-        .case-header .meta-strip { display: flex; gap: 2rem; color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem; flex-wrap: wrap; }
-        .case-body { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; padding: 4rem 0; }
-        .content-section { margin-bottom: 3.5rem; }
-        .content-section h2 { font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600; color: var(--accent-color); }
-        .content-section p { margin-bottom: 1rem; color: #333; font-size: 1.05rem; }
-        .content-section ul { margin-left: 1.5rem; margin-bottom: 1rem; color: #333; }
-        .content-section li { margin-bottom: 0.5rem; }
-        .sidebar-card { background: white; border: 1px solid var(--border-color); padding: 2rem; border-radius: 6px; position: sticky; top: 2rem; }
-        .sidebar-card h3 { font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase; tracking: 0.05em; }
-        .sidebar-card ul { list-style: none; }
-        .sidebar-card li { margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--text-muted); }
-        .sidebar-card strong { color: var(--text-main); }
-        .deliverable-btn { display: block; text-align: center; background: var(--accent-color); color: white; padding: 0.75rem; border-radius: 4px; text-decoration: none; font-weight: 500; margin-top: 1.5rem; }
-        .deliverable-btn:hover { background: var(--accent-hover); }
-        @media (max-width: 900px) {
-            .case-body { grid-template-columns: 1fr; gap: 2rem; }
-            .sidebar-card { position: relative; top: 0; }
+        :root {
+            --bg-canvas: #fcfbf9;
+            --text-dark: #111215;
+            --text-muted: #53565a;
+            --accent-terracotta: #b85a3a;
+            --accent-moss: #2d4a3e;
+            --border-light: #e5e2dd;
+            --font-display: "Times New Roman", Times, Baskerville, Georgia, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-canvas); color: var(--text-dark); font-family: var(--font-sans); line-height: 1.6; padding: 4rem 2rem; max-width: 800px; margin: 0 auto; }
+        
+        .back-link { display: inline-block; text-decoration: none; color: var(--text-dark); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; margin-bottom: 4rem; }
+        .back-link:hover { color: var(--accent-terracotta); }
+        
+        header { margin-bottom: 4rem; padding-bottom: 2rem; border-bottom: 2px solid var(--text-dark); }
+        .meta-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-terracotta); font-weight: 700; margin-bottom: 0.5rem; }
+        h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; }
+        
+        .badge-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .badge { background: var(--accent-moss); color: white; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; padding: 4px 10px; letter-spacing: 0.05em; border-radius: 2px; }
+        .badge-outline { background: transparent; border: 1px solid var(--text-dark); color: var(--text-dark); }
+
+        .cta-container { display: flex; gap: 1.5rem; margin: 3rem 0; }
+        .btn { display: inline-block; padding: 1rem 2rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 2px; text-align: center; }
+        .btn-primary { background-color: var(--text-dark); color: white; width: 100%; max-width: 320px; }
+        .btn-primary:hover { background-color: var(--accent-terracotta); }
+        .btn-secondary { border: 1px solid var(--text-dark); color: var(--text-dark); }
+        .btn-secondary:hover { background-color: #f4f0ea; }
+
+        .hero-img { width: 100%; height: auto; border: 1px solid var(--border-light); margin-bottom: 4rem; display: block; }
+
+        section { margin-bottom: 3.5rem; }
+        h2 { font-family: var(--font-display); font-size: 1.85rem; font-weight: 400; margin-bottom: 1.25rem; color: var(--text-dark); border-left: 3px solid var(--accent-terracotta); padding-left: 1rem; }
+        p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; text-align: justify; }
+        ul { margin-left: 2rem; margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.1rem; }
+        li { margin-bottom: 0.5rem; }
+
+        footer { margin-top: 6rem; padding-top: 2rem; border-top: 1px solid var(--border-light); font-size: 0.9rem; color: var(--text-muted); text-align: center; }
     </style>
 </head>
 <body>
-    <nav class="back-nav">
-        <a href="../index.html">&larr; Back to Portfolio Home</a>
-    </nav>
 
-    <header class="case-header">
-        <div class="case-meta">Case Study 02 &bull; Interactive Experience</div>
-        <h1>Visual Literacy Architecture:<br>Mobile-First Learning Simulation Prototype</h1>
-        <div class="meta-strip">
-            <div><strong>Role:</strong> Interactive Experience Architect</div>
-            <div><strong>Context:</strong> Mobile Educational Simulation</div>
-            <div><strong>Timeline:</strong> 3 Weeks</div>
+    <a href="../index.html" class="back-link">&larr; Return to Exhibition Gallery</a>
+
+    <header>
+        <div class="meta-label">Case Study II &bull; Mobile Simulation</div>
+        <h1>Visual Literacy Architecture Module</h1>
+        <div class="badge-row">
+            <div class="badge">Articulate Rise 360</div>
+            <div class="badge">Canva</div>
+            <div class="badge badge-outline">Mobile-Responsive UX</div>
         </div>
     </header>
 
-    <div class="case-body">
-        <main class="main-content">
-            <section class="content-section">
-                <h2>1. The Pedagogical Objective</h2>
-                <p>Modern remote learners suffer from micro-learning fatigue. The objective was to design a mobile-first educational simulation building visual literacy capabilities through progressive disclosure and guided scenario practices. The solution targets interactive observation tracks, enabling independent analytical skill development without cognitive bottlenecks.</p>
-            </section>
+    <img src="../assets/img/case2-thumbnail.png" alt="Mobile Simulation Interface Mockup" class="hero-img">
 
-            <section class="content-section">
-                <h2>2. Instructional Scaffolding Theory</h2>
-                <p>Drawing deeply on advanced <strong>Scaffolding Theory (MA ELET)</strong>, the architecture provides temporary instructional support structures—modeling, micro-prompting, and gradual feedback fading. This systematically moves corporate learners away from structured system observations to autonomous, critical problem-solving pathways.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>3. Gallery-Informed Visual Assets</h2>
-                <p>Applying professional <strong>Fine Arts design principles</strong>, I engineered a highly polished visual framework. Custom user mechanics were custom-built specifically for touch-driven mobile environments—including gesture-led spatial annotations, framed comparative image view sliders, and floating modular feedback systems. The interface enforces restraint, deliberate editorial framing, and spacious negative zones to let content breathe.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>4. High-Value Project Deliverables</h2>
-                <p>This completed simulation showcases professional delivery across modern cross-platform formats, configured to integrate seamlessly with modern corporate architectures:</p>
-                <ul>
-                    <li>Fully interactive, deployment-ready mobile training simulation module prototypes.</li>
-                    <li>End-to-end user scenario flows and wireframe storyboard diagrams.</li>
-                    <li>Modular, reusable custom UI asset component libraries ready for development handoffs.</li>
-                    <li>Assessment-aligned practice tracking frameworks engineered for seamless SCORM/LMS packaging.</li>
-                </ul>
-            </section>
-        </main>
-
-        <aside class="sidebar">
-            <div class="sidebar-card">
-                <h3>Project Toolkit</h3>
-                <ul>
-                    <li><strong>Instructional Models:</strong> Progressive Disclosure, Scaffolding Theory</li>
-                    <li><strong>Authoring Platforms:</strong> Articulate Storyline, Advanced Variables</li>
-                    <li><strong>Interface Design:</strong> Modular UI Component Systems, Custom Sliders</li>
-                    <li><strong>Testing Ecosystem:</strong> LMS Sandbox & Device Preview Profiles</li>
-                </ul>
-                <a href="#" class="deliverable-btn">Launch Mobile Simulation</a>
-                <a href="#" class="deliverable-btn" style="background:#fff; color:var(--text-main); border:1px solid var(--border-color); margin-top:0.75rem;">Explore Storyboards</a>
-            </div>
-        </aside>
+    <div class="cta-container">
+        <a href="#" target="_blank" class="btn btn-primary">🚀 Launch Mobile Simulation</a>
+        <a href="#" target="_blank" class="btn btn-secondary">📄 View Action Map (PDF)</a>
     </div>
+
+    <main>
+        <section>
+            <h2>The Business Challenge</h2>
+            <p>Field sales teams and regional account managers struggled to quickly interpret complex spatial layouts and real-time visual analytics dashboards during client consultations. The internal training available relied on static slide presentations, failing to mimic the fast-paced, high-pressure environment of live client presentations.</p>
+            <p>This lack of practical visual fluency directly lengthened client sales cycles by an average of 18 days and reduced initial project proposal win rates by 14% due to communication friction.</p>
+        </section>
+
+        <section>
+            <h2>The Performance & Audience Analysis</h2>
+            <p>The target learner group consists of busy, field-based professionals who rely entirely on mobile devices between client site visits. A focused needs assessment revealed that learners did not lack product knowledge; rather, they lacked the spatial scanning speed required to pull key data insights from dense dashboard layouts under tight time constraints. Gaps were analyzed across three key interactions:</p>
+            <ul>
+                <li>Isolating outlier visual data trends on complex graphical charts in under 5 seconds.</li>
+                <li>Navigating progressive disclosure tabs under intense, live presentation pressures.</li>
+                <li>Translating visual chart elements into clear, persuasive verbal business outcomes.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>The Instructional Solution</h2>
+            <p>To support learning on the go, a mobile-first responsive instructional prototype was engineered using Articulate Rise 360 and integrated custom design assets from Canva. The architecture strips away unnecessary visual noise and focuses strictly on high-impact micro-learning touchpoints:</p>
+            <ul>
+                <li><strong>Progressive Disclosure Models:</strong> Information is revealed systematically based on user scroll and click interactions, preventing cognitive overload and mimicking software dashboards.</li>
+                <li><strong>Gesture-Led Interactivities:</strong> Integrated drag-and-drop sort blocks and flashcard sorting routines require active physical engagement, strengthening muscle memory and retention.</li>
+                <li><strong>Timed Visual Flash-Drills:</strong> Micro-challenges push users to quickly identify tracking errors or high-value data patterns within simulated phone-screen viewports, rapidly building practical visual literacy.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Measurable Business Impact</h2>
+            <p>Following a 60-day pilot program deployed across three regional sales territories, the mobile instructional simulation generated clear improvements in sales performance metrics:</p>
+            <ul>
+                <li><strong>Cycle Reduction:</strong> Shortened average client sales decision cycles by 6 full days through improved presentation clarity.</li>
+                <li><strong>11% Win Rate Increase:</strong> Elevated initial spatial layout proposal win rates from 62% up to 73% during client bids.</li>
+                <li><strong>Time Optimization:</strong> Achieved a 94% course completion rate, with learners consuming modules during standard down-time between on-site client calls.</li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Aseel Refai &bull; Dallas-Fort Worth, TX</p>
+        &copy; 2026 Aseel Refai &bull; Learning Experience Architect
     </footer>
+
 </body>
 </html>
-
-<section id="storyboards-preview" class="content-section" style="max-width: 1100px; margin: 4rem auto; padding-top: 4rem; border-top: 1px solid var(--border-color);">
-    <h2>5. Interactive Mobile Interface Storyboard Framework</h2>
-    <p>This layout outlines the structural components designed to model complex visual analysis workflows on high-density mobile interfaces.</p>
-    
-    <div style="margin-top: 2rem; border: 1px solid var(--border-color); border-radius: 6px; background: white; padding: 2rem; margin-bottom: 2rem;">
-        <h3 style="color: var(--accent-color); margin-bottom: 0.5rem;">Frame 01: Progressive Information Disclosure</h3>
-        <p style="font-size: 0.95rem; margin-bottom: 1rem;"><strong>Layout Principle:</strong> Hiding dense text strings behind intuitive, interactive touch hotspots to prevent immediate visual overwhelming of the learner during technical baseline overviews.</p>
-    </div>
-
-    <div style="border: 1px solid var(--border-color); border-radius: 6px; background: white; padding: 2rem; margin-bottom: 2rem;">
-        <h3 style="color: var(--accent-color); margin-bottom: 0.5rem;">Frame 02: Comparative Matrix Slider</h3>
-        <p style="font-size: 0.95rem; margin-bottom: 1rem;"><strong>Layout Principle:</strong> Implementing a touch-drag slider component overlaying two complex diagrams. This empowers learners to identify subtle workflow execution visual differences dynamically.</p>
-    </div>
-
-    <div style="border: 1px solid var(--border-color); border-radius: 6px; background: white; padding: 2rem;">
-        <h3 style="color: var(--accent-color); margin-bottom: 0.5rem;">Frame 03: Scaffolding Feedback Overlay</h3>
-        <p style="font-size: 0.95rem; margin-bottom: 1rem;"><strong>Layout Principle:</strong> Displaying micro-feedback cards right above active error zones instead of traditional pop-ups. This isolates contextual mistakes instantly, keeping learning fluid.</p>
-    </div>
-</section>
