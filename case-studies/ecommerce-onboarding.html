@@ -2,28 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study I | E-Commerce Onboarding Matrix</title>
     <style>
-        :root { --primary: #0076df; --text: #333; --bg: #fff; --border: 
-#eaeaea; }
-        body { font-family: -apple-system, sans-serif; color: var(--text); 
-padding: 2rem; max-width: 800px; margin: 0 auto; }
-        .case-actions { display: flex; gap: 1rem; margin: 2rem 0; }
-        .case-link { padding: 12px 24px; text-decoration: none; 
-border-radius: 6px; font-weight: 600; }
-        .primary-btn { background: var(--primary); color: white; }
-        .secondary-btn { border: 1px solid #666; color: #666; }
+        :root {
+            --bg-canvas: #fcfbf9;
+            --text-dark: #111215;
+            --text-muted: #53565a;
+            --accent-terracotta: #b85a3a;
+            --accent-moss: #2d4a3e;
+            --border-light: #e5e2dd;
+            --font-display: "Times New Roman", Times, Baskerville, Georgia, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-canvas); color: var(--text-dark); font-family: var(--font-sans); line-height: 1.6; padding: 4rem 2rem; max-width: 800px; margin: 0 auto; }
+        
+        .back-link { display: inline-block; text-decoration: none; color: var(--text-dark); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; margin-bottom: 4rem; }
+        .back-link:hover { color: var(--accent-terracotta); }
+        
+        header { margin-bottom: 4rem; padding-bottom: 2rem; border-bottom: 2px solid var(--text-dark); }
+        .meta-label { font-size: 0.85rem; text-transform: uppercase; tracking: 0.1em; color: var(--accent-terracotta); font-weight: 700; margin-bottom: 0.5rem; }
+        h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; }
+        
+        .badge-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .badge { background: var(--accent-moss); color: white; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; padding: 4px 10px; letter-spacing: 0.05em; border-radius: 2px; }
+        .badge-outline { background: transparent; border: 1px solid var(--text-dark); color: var(--text-dark); }
+
+        .cta-container { display: flex; gap: 1.5rem; margin: 3rem 0; }
+        .btn { display: inline-block; padding: 1rem 2rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; tracking: 0.05em; border-radius: 2px; text-align: center; }
+        .btn-primary { background-color: var(--text-dark); color: white; width: 100%; max-width: 320px; }
+        .btn-primary:hover { background-color: var(--accent-terracotta); }
+        .btn-secondary { border: 1px solid var(--text-dark); color: var(--text-dark); }
+        .btn-secondary:hover { background-color: #f4f0ea; }
+
+        .hero-img { width: 100%; height: auto; border: 1px solid var(--border-light); margin-bottom: 4rem; display: block; }
+
+        section { margin-bottom: 3.5rem; }
+        h2 { font-family: var(--font-display); font-size: 1.85rem; font-weight: 400; margin-bottom: 1.25rem; color: var(--text-dark); border-left: 3px solid var(--accent-terracotta); padding-left: 1rem; }
+        p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; text-align: justify; }
+        ul { margin-left: 2rem; margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.1rem; }
+        li { margin-bottom: 0.5rem; }
+
+        footer { margin-top: 6rem; padding-top: 2rem; border-top: 1px solid var(--border-light); font-size: 0.9rem; color: var(--text-muted); text-align: center; }
     </style>
 </head>
 <body>
-    <h1>E-Commerce New-Hire Onboarding Matrix</h1>
-    <div class="case-actions">
-        <a href="https://figma.com" target="_blank" class="case-link 
-primary-btn">⚡ Launch UI Layout Presentation</a>
-        <a href="../assets/action-map-v2.pdf" target="_blank" 
-class="case-link secondary-btn">📋 View Project Action Map</a>
+
+    <a href="../index.html" class="back-link">&larr; Return to Exhibition Gallery</a>
+
+    <header>
+        <div class="meta-label">Case Study I &bull; Global Operations</div>
+        <h1>E-Commerce New-Hire Onboarding Matrix</h1>
+        <div class="badge-row">
+            <div class="badge">Articulate Storyline 360</div>
+            <div class="badge">Figma</div>
+            <div class="badge badge-outline">WCAG 2.1 AA Compliant</div>
+        </div>
+    </header>
+
+    <img src="../assets/img/case1-thumbnail.png" alt="E-Commerce Interface Simulator Mockup" class="hero-img">
+
+    <div class="cta-container">
+        <a href=\"https://figma.com\" target=\"_blank\" target="_blank" class="btn btn-primary">⚡ Launch UI Layout Presentation</a>
+        <a href=\"../assets/action-map-v2.pdf\" target=\"_blank\" target="_blank" class="btn btn-secondary">📋 View Project Action Map</a>
     </div>
-    <p>... (Rest of content from [0860fa1]) ...</p>
+
+    <main>
+        <section>
+            <h2>The Business Challenge</h2>
+            <p>Following a rapid expansion of standard global logistics channels, new-hire supply chain operators displayed significant performance variances during platform deployment. Traditional text-heavy systems manuals triggered heavy cognitive fatigue, culminating in critical inventory tracking and order-fulfillment data-entry errors within the active e-commerce pipeline dashboard.</p>
+            <p>These downstream technical mistakes generated shipping backlogs, elevated customer-support queue volumes by 18%, and delayed standard regional delivery velocities.</p>
+        </section>
+
+        <section>
+            <h2>The Performance & Audience Analysis</h2>
+            <p>A comprehensive task analysis was conducted across remote fulfillment staff cohorts. The target learner demographic displayed highly diverse technical tool fluencies and computer literacy levels. Key performance gaps were mapped directly using Cathy Moore’s Action Mapping framework, isolating three specific behavioral friction points:</p>
+            <ul>
+                <li>Misinterpreting system status indicators and inventory exceptions flags.</li>
+                <li>Improper data entry sequence routing during cross-border custom manifests.</li>
+                <li>Inability to trace multi-tier tracking histories during fulfillment exceptions.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>The Instructional Solution</h2>
+            <p>Instead of relying on passive text review vectors, an interactive, web-based software simulator environment was custom engineered using Articulate Storyline 360 and detailed interface mockups from Figma. The learning experience leverages deliberate practice architectures and progressive disclosure mechanics:</p>
+            <ul>
+                <li><strong>Branching Choice Frameworks:</strong> Learners encounter real-world inventory exception scenarios and must make critical system sorting actions with realistic real-time feedback loops.</li>
+                <li><strong>Safe Failure Workspaces:</strong> Data-entry errors are met with diagnostic contextual coaching text blocks instead of immediate systemic system crashes, allowing learners to safely refine mental operational maps.</li>
+                <li><strong>Universal Accessibility Engineering:</strong> The UI structure explicitly utilizes semantic contrast styling, alt-text layout trees, full keyboard focus tab indexes, and screen-reader accessibility hooks matching WCAG 2.1 specifications.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Measurable Business Impact</h2>
+            <p>During a initial controlled 30-day alpha baseline launch cross-examined with standard platform control metrics, the instructional module demonstrated significant operational optimization shifts:</p>
+            <ul>
+                <li><strong>14-Day Velocity Shift:</strong> Accelerated standard new-hire operational onboarding ramp-up times from 45 days down to 31 days.</li>
+                <li><strong>22% Error Mitigation:</strong> Reduced downstream system data-entry errors by 22% across active fulfillment pipelines.</li>
+                <li><strong>Fulfillment Optimization:</strong> Shaved order exception backlog processing times by 11% within localized supply chain nodes.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 Aseel Refai &bull; Learning Experience Architect
+    </footer>
+
 </body>
 </html>
-
