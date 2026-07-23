@@ -3,171 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aseel Refai | Learning Experience Architect & Visual Storyteller</title>
+    <title>Aseel Refai | Instructional Designer & eLearning Portfolio</title>
     <style>
-        :root {
-            --bg-canvas: #fcfbf9;
-            --text-dark: #111215;
-            --text-muted: #53565a;
-            --accent-terracotta: #b85a3a;
-            --accent-moss: #2d4a3e;
-            --border-light: #e5e2dd;
-            --font-display: "Times New Roman", Times, Baskerville, Georgia, serif;
-            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
+        :root { --primary: #2563eb; --primary-dark: #1d4ed8; --text: #1f2937; --text-muted: #4b5563; --bg: #f9fafb; --card-bg: #ffffff; --border: #e5e7eb; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: var(--bg-canvas); color: var(--text-dark); font-family: var(--font-sans); line-height: 1.6; padding: 3rem 2rem; max-width: 1200px; margin: 0 auto; }
-
-        header { padding: 8rem 0 4rem 0; border-bottom: 2px solid var(--text-dark); }
-        .brand-title { font-family: var(--font-display); font-size: 4.5rem; font-weight: 400; letter-spacing: -0.02em; line-height: 1.0; margin-bottom: 1.5rem; }
-        .subtitle { font-family: var(--font-sans); font-size: 1.25rem; text-transform: uppercase; tracking: 0.05em; color: var(--accent-terracotta); font-weight: 600; margin-bottom: 2rem; }
-        .hero-statement { font-family: var(--font-display); font-size: 2rem; font-style: italic; font-weight: 400; line-height: 1.4; max-width: 900px; color: var(--text-dark); margin-bottom: 3rem; }
-        .hero-statement strong { font-style: normal; color: var(--accent-moss); font-weight: 400; border-bottom: 1px solid var(--accent-moss); }
-
-        .cta-group { display: flex; gap: 1.5rem; }
-        .btn { display: inline-block; padding: 1rem 2rem; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: all 0.2s ease; text-transform: uppercase; tracking: 0.05em; border-radius: 2px; }
-        .btn-primary { background-color: var(--text-dark); color: white; }
-        .btn-primary:hover { background-color: var(--accent-terracotta); }
-        .btn-secondary { border: 1px solid var(--text-dark); color: var(--text-dark); }
-        .btn-secondary:hover { background-color: #f4f0ea; }
-
-        .dashboard-section { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; padding: 6rem 0; border-bottom: 1px solid var(--border-light); }
-        .section-label { font-family: var(--font-sans); font-size: 0.85rem; text-transform: uppercase; tracking: 0.1em; color: var(--text-muted); font-weight: 600; }
-        .capabilities-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-        .cap-card h3 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-bottom: 1rem; color: var(--accent-moss); }
-        .cap-card p { color: var(--text-muted); font-size: 1rem; }
-
-        .portfolio-section { padding: 6rem 0; }
-        .case-wrapper { display: flex; flex-direction: column; gap: 6rem; margin-top: 4rem; }
-        .case-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-bottom: 6rem; border-bottom: 1px solid var(--border-light); }
-        .case-row:last-child { border-bottom: none; }
-        .case-visual-placeholder { background: #f0ede7; border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-style: italic; color: var(--text-muted); min-height: 350px; position: relative; }
-        .case-visual-placeholder::before { content: "🎨"; font-size: 3rem; opacity: 0.3; }
-        .case-content { display: flex; flex-direction: column; justify-content: center; }
-        .case-num { font-family: var(--font-sans); font-size: 0.85rem; color: var(--accent-terracotta); font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; }
-        .case-content h3 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 400; line-height: 1.2; margin-bottom: 1.5rem; }
-        .case-content p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; }
-        .case-link { font-family: var(--font-sans); color: var(--text-dark); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; border-bottom: 2px solid var(--text-dark); padding-bottom: 4px; align-self: flex-start; }
-        .case-link:hover { color: var(--accent-terracotta); border-color: var(--accent-terracotta); }
-
-        footer { padding: 6rem 0 2rem 0; display: flex; justify-content: space-between; border-top: 2px solid var(--text-dark); font-size: 0.9rem; color: var(--text-muted); }
-        footer a { color: var(--text-dark); text-decoration: none; font-weight: 500; }
-
-        @media (max-width: 900px) {
-            .dashboard-section, .case-row { grid-template-columns: 1fr; gap: 2rem; }
-            body { padding: 1.5rem; }
-            .brand-title { font-size: 3rem; }
-            header { padding: 4rem 0; }
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; padding: 2.5rem 1rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { background: var(--card-bg); padding: 3.5rem 2rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 2.5rem; border: 1px solid var(--border); text-align: center; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p.subtitle { font-size: 1.2rem; color: var(--primary); font-weight: 600; margin-bottom: 1rem; }
+        header p.bio { color: var(--text-muted); max-width: 650px; margin: 0 auto 1.5rem auto; }
+        .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 0.65rem 1.25rem; border-radius: 6px; text-decoration: none; font-weight: 500; }
+        .btn:hover { background: var(--primary-dark); }
+        .btn-outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+        section h2 { font-size: 1.5rem; margin-bottom: 1.25rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+        .card { background: var(--card-bg); border-radius: 10px; padding: 1.75rem; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+        .card p { color: var(--text-muted); margin-bottom: 1.25rem; }
+        footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--border); }
     </style>
 </head>
 <body>
-
-    <header>
-        <div class="subtitle">Instructional Designer & Learning Experience Architect</div>
-        <h1 class="brand-title">Aseel Refai</h1>
-        <p class="hero-statement">
-            Bridging <strong>Emerging Learning Technologies (MA ELET)</strong> with <strong>Information Architecture</strong> to design immersive corporate onboarding and systems training programs that drive business metrics.
-        </p>
-        <div class="cta-group">
-            <a href="#work" class="btn btn-primary">View Case Studies</a>
-            <a href="mailto:refai0511@gmail.com" class="btn btn-secondary">Contact Me</a>
-            <a href="assets/Aseel_Refai_Resume.pdf" target="_blank" class="btn btn-secondary" style="border-style:dashed;">📄 Download Resume</a>
-        </div>
-    </header>
-
-    <section class="dashboard-section">
-        <div class="section-label">Core Philosophy & Systems</div>
-        <div class="capabilities-grid">
-            <div class="cap-card">
-                <h3>Visual Architecture</h3>
-                <p>Applying structural design principles to strip away decorative interface noise. Systematically minimizing learner cognitive fatigue while maximizing structural knowledge acquisition.</p>
+    <div class="container">
+        <header>
+            <h1>Aseel Refai</h1>
+            <p class="subtitle">Instructional Designer & eLearning Developer</p>
+            <p class="bio">Designing learner-centric training solutions, digital onboarding frameworks, and interactive learning experiences backed by modern instructional design methodologies.</p>
+            <div class="btn-group">
+                <a href="assets/Aseel_Refai_Resume.pdf" class="btn" target="_blank">View Resume</a>
+                <a href="mailto:refai0511@gmail.com" class="btn btn-outline">Get in Touch</a>
             </div>
-            <div class="cap-card">
-                <h3>Pedagogical Scaffolding</h3>
-                <p>Leveraging formal instructional frameworks (ADDIE, Gagné) to translate complex data pipelines into intuitive, measurable learning paths that drive business performance metrics.</p>
-            </div>
-        </div>
-    </section>
-
-    <main id="work" class="portfolio-section">
-        <div class="section-label">Selected Exhibition Case Studies</div>
-        
-        <div class="case-wrapper">
-            <article class="case-row">
-                <div class="case-visual"><img src="assets/img/case1-thumbnail.png" alt="" style="width:100%; height:auto; display:block; border:1px solid var(--border-light);"></div>
-                <div class="case-content">
-                    <div class="case-num">Case Study I &bull; Global Operations</div>
-                    <h3>E-Commerce New-Hire Onboarding Matrix</h3>
-                    <div class="tool-badge" style="display:inline-block; background:#2d4a3e; color:white; font-size:0.75rem; font-weight:600; text-transform:uppercase; padding:4px 8px; letter-spacing:0.05em; margin-top:0.5rem; margin-bottom:1rem; border-radius:2px;">Built with Articulate Storyline 360 & Figma</div>
-                    <p>Designed an immersive onboarding track for supply chain staff, reducing order-fulfillment data-entry errors by 22% and shortening employee ramp-up times by 14 days.</p>
-                    <a href="case-studies/ecommerce-onboarding.html" class="case-link">Launch Onboarding Module &rarr;</a>
-                    <a href="assets/action-map-v2.pdf" target="_blank" class="case-link" style="background: transparent; border: 1px solid var(--text-muted); color: var(--text-muted); margin-left: 1rem;">
+        </header>
+        <section>
+            <h2>Featured Instructional Design Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Case Study I: E-Commerce New Hire Onboarding Matrix</h3>
+                    <p>A comprehensive onboarding framework and interactive UI layout designed to streamline the learning curve for new team members, targeting performance objectives and engagement.</p>
+                    <div class="btn-group" style="justify-content: flex-start;">
+                        <a href="case-studies/ecommerce-onboarding.html" class="btn">Read Case Study</a>
+                        <a href="https://www.figma.com/deck/aefxOtJqoXBAEsD6Lz5w3p/E-Commerce-New-Hire-Onboarding-Matrix-UI-Layouts?node-id=2-19&t=XdicqbtdN3BiPg9K-1" class="btn btn-outline" target="_blank">View Figma Deck</a>
+                    </div>
                 </div>
-            </article>
-
-            <article class="case-row">
-                <div class="case-visual"><img src="assets/img/case2-thumbnail.png" alt="" style="width:100%; height:auto; display:block; border:1px solid var(--border-light);"></div>
-                <div class="case-content">
-                    <div class="case-num">Case Study II &bull; Mobile Simulation</div>
-                    <h3>Visual Literacy Architecture Module</h3>
-                    <div class="tool-badge" style="display:inline-block; background:#2d4a3e; color:white; font-size:0.75rem; font-weight:600; text-transform:uppercase; padding:4px 8px; letter-spacing:0.05em; margin-top:0.5rem; margin-bottom:1rem; border-radius:2px;">Built with Articulate Rise 360 & Canva</div>
-                    <p>Developed a mobile-responsive asynchronous course utilizing progressive disclosure and interactive gesture-led sorting blocks to accelerate data visualization scanning accuracy for field personnel by 18%.</p>
-                    <a href="case-studies/customer-complaints.html" class="case-link">⚡ Launch Onboarding Project &rarr;</a>
-                    <a href="assets/action-map-v2.pdf" target="_blank" class="case-link" style="background: transparent; border: 1px solid var(--text-muted); color: var(--text-muted); margin-left: 1rem;">📋 View Action Map &rarr;</a>
+                <div class="card">
+                    <h3>Case Study II: Customer Support & Compliance Training</h3>
+                    <p>Structured problem-solving frameworks, customer complaint resolution modules, and compliance process mapping designed to enhance real-world employee readiness.</p>
+                    <div class="btn-group" style="justify-content: flex-start;">
+                        <a href="case-studies/customer-complaints.html" class="btn">Read Case Study</a>
+                        <a href="assets/data-compliance-doc.pdf" class="btn btn-outline" target="_blank">View Compliance Doc</a>
+                    </div>
                 </div>
-            </article>
-
-            <article class="case-row">
-                <div class="case-visual"><img src="assets/img/data-compliance-mockup.png" alt="" style="width:100%; height:auto; display:block; border:1px solid var(--border-light); filter: grayscale(100%); opacity: 0.5;"></div>
-                <div class="case-content">
-                    <div class="case-num">Case Study III &bull; Leadership & Compliance</div>
-                    <h3>Cross-Functional Feedback & Data Compliance Matrix</h3>
-                    <div class="tool-badge" style="display:inline-block; background:#2d4a3e; color:white; font-size:0.75rem; font-weight:600; text-transform:uppercase; padding:4px 8px; letter-spacing:0.05em; margin-top:0.5rem; margin-bottom:1rem; border-radius:2px;">Built with Articulate Rise 360</div>
-                    <p>Mitigating compliance liabilities by training management teams on data governance policies. training cross-functional management teams on active data governance and constructive response loops through realistic scenarios.</p>
-                    <a href="compliance-lesson/content/index.html" target="_blank" class="case-link" style="margin-right: 1rem;">Launch Interactive Game &rarr;</a>
-                    <a href="assets/data-compliance-doc.pdf" target="_blank" class="case-link" style="background: transparent; border: 1px solid var(--text-muted); color: var(--text-muted);">📋 View ADDIE Design Doc &rarr;</a>
-                </div>
-            </article>
-        </div>
-    </main>
-
-    <section id="about" class="dashboard-section" style="border-top:1px solid var(--border-light); padding-top:6rem;">
-        <div class="section-label">About the Architect</div>
-        <div style="display:grid; grid-template-columns: 1fr 2fr; gap:3rem; align-items:center;">
-            <div>
-                <img src="assets/img/aseel-headshot.png" alt="Aseel Refai Headshot" style="width:100%; height:auto; border-radius:50%; border:1px solid var(--border-light); display:block; background:#f0ede7; aspect-ratio:1/1; object-fit:cover;">
             </div>
-            <div>
-                <h3 style="font-family: var(--font-display); font-size: 2.25rem; font-weight: 400; margin-bottom:1rem; color:var(--accent-moss);">Aseel Refai</h3>
-                <p style="color: var(--text-muted); font-size:1.1rem; margin-bottom:1.5rem;">Based in Dallas-Fort Worth, TX, I am a Learning Experience Architect leveraging formal Emerging Learning Technologies background to eliminate performance blockers within corporate environments. I design and scale learning programs that align employee actions directly with strategic business outcomes.</p>
-                <p style="color: var(--text-muted); font-size:1.1rem;">By anchoring every module in Cathy Moore's Action Mapping and robust WCAG accessibility guidelines, I ensure enterprise training deliverables are universally usable, clear, and measurably effective.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div>&copy; 2026 Aseel Refai &bull; Dallas-Fort Worth, TX</div>
-        <div><a href="mailto:refai0511@gmail.com">refai0511@gmail.com</a> &bull; <a href="https://linkedin.com">LinkedIn Profile</a></div>
-    </footer>
-
+        </section>
+        <footer>
+            <p>&copy; 2026 Aseel Refai. Built for Learning & Development Impact.</p>
+        </footer>
+    </div>
 </body>
 </html>
-
-<style>
-  .tool-badge {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 4px 10px;
-    border-radius: 12px;
-    background-color: #f0ede9 !important;
-    color: #2d4a3e !important;
-    border: 1px solid #e5e2dd;
-    margin-top: 8px;
-    margin-bottom: 12px;
-  }
-</style>
