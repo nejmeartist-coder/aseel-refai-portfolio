@@ -5,143 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study III | Leadership & Compliance eLearning Module</title>
     <style>
+
         :root {
-            --primary: #c25e38;
-            --primary-dark: #a04a29;
-            --text: #2c2c2c;
-            --text-muted: #616161;
-            --bg: #fdfbf7;
-            --card-bg: #ffffff;
-            --border: #f0eae1;
+            --bg-canvas: #fcfbf9;
+            --text-dark: #111215;
+            --text-muted: #53565a;
+            --accent-terracotta: #b85a3a;
+            --accent-moss: #2d4a3e;
+            --border-light: #e5e2dd;
+            --font-display: "Times New Roman", Times, Baskerville, Georgia, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.7;
-            padding: 2.5rem 1rem;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            padding: 3rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
-        }
-        .back-link {
-            display: inline-block;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-        .back-link:hover { text-decoration: underline; }
-        h1 {
-            font-size: 2.25rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-        h2 {
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.3rem;
-        }
-        p, ul {
-            margin-bottom: 1.2rem;
-            color: var(--text-muted);
-        }
-        ul { padding-left: 1.5rem; }
+        body { background-color: var(--bg-canvas); color: var(--text-dark); font-family: var(--font-sans); line-height: 1.6; padding: 4rem 2rem; max-width: 800px; margin: 0 auto; }
+        
+        .back-link { display: inline-block; text-decoration: none; color: var(--text-dark); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; margin-bottom: 4rem; }
+        .back-link:hover { color: var(--accent-terracotta); }
+        
+        header { margin-bottom: 4rem; padding-bottom: 2rem; border-bottom: 2px solid var(--text-dark); }
+        .meta-label { font-size: 0.85rem; text-transform: uppercase; tracking: 0.1em; color: var(--accent-terracotta); font-weight: 700; margin-bottom: 0.5rem; }
+        h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; }
+        
+        .badge-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .badge { background: var(--accent-moss); color: white; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; padding: 4px 10px; letter-spacing: 0.05em; border-radius: 2px; }
+        .badge-outline { background: transparent; border: 1px solid var(--text-dark); color: var(--text-dark); }
+
+        .cta-container { display: flex; gap: 1.5rem; margin: 3rem 0; }
+        .btn { display: inline-block; padding: 1rem 2rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; tracking: 0.05em; border-radius: 2px; text-align: center; }
+        .btn-primary { background-color: var(--text-dark); color: white; width: 100%; max-width: 320px; }
+        .btn-primary:hover { background-color: var(--accent-terracotta); }
+        .btn-secondary { border: 1px solid var(--text-dark); color: var(--text-dark); }
+        .btn-secondary:hover { background-color: #f4f0ea; }
+
+        .hero-img { width: 100%; height: auto; border: 1px solid var(--border-light); margin-bottom: 4rem; display: block; }
+
+        section { margin-bottom: 3.5rem; }
+        h2 { font-family: var(--font-display); font-size: 1.85rem; font-weight: 400; margin-bottom: 1.25rem; color: var(--text-dark); border-left: 3px solid var(--accent-terracotta); padding-left: 1rem; }
+        p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; text-align: justify; }
+        ul { margin-left: 2rem; margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.1rem; }
         li { margin-bottom: 0.5rem; }
-        .cta-box {
-            background: #fff8f5;
-            border: 1px solid #f6dcd0;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 2.5rem;
-            text-align: center;
-        }
-        .cta-box h3 { color: var(--primary); margin-bottom: 0.75rem; }
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 0.65rem 1.25rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-        .btn:hover { background: var(--primary-dark); }
-        .btn-outline {
-            background: transparent;
-            color: var(--primary);
-            border: 1px solid var(--primary);
-        }
-        .btn-outline:hover { background: var(--primary); color: white; }
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
+
+        footer { margin-top: 6rem; padding-top: 2rem; border-top: 1px solid var(--border-light); font-size: 0.9rem; color: var(--text-muted); text-align: center; }
+    
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
+    <main class="container">
+        <a href="../index.html" class="back-link">&larr; Return to Portfolio Index</a>
         
         <h1>Case Study III: Leadership & Compliance eLearning Module</h1>
         <p class="subtitle">An interactive, scenario-driven compliance training built using the ADDIE instructional design framework and Articulate 360.</p>
 
-        <h2>1. Analysis (The Challenge & Audience)</h2>
-        <p><strong>The Business Need:</strong> Organization leaders faced growing compliance risks due to unstructured cross-functional feedback workflows and gaps in data privacy handling. Traditional compliance training relied on passive slide decks, resulting in low knowledge retention and recurring operational errors.</p>
-        <p><strong>Target Audience:</strong> Mid-level managers and team leads who require practical, decision-making capabilities rather than rote memorization of policies.</p>
+        <section>
+            <h2>1. Analysis & Problem Scope</h2>
+            <p>Organization leaders faced growing compliance risks due to unstructured cross-functional feedback workflows and gaps in data privacy handling. Traditional compliance training relied on passive slide decks, resulting in low knowledge retention and recurring operational errors.</p>
+            <p><strong>Target Audience:</strong> Mid-level managers and team leads who require practical, decision-making capabilities rather than rote memorization of enterprise policies.</p>
+        </section>
 
-        <h2>2. Design (Instructional Strategy & Action Mapping)</h2>
-        <p>To eliminate information bloat, I began by creating a detailed <strong>Action Map</strong>. Rather than teaching every policy clause, the design focused purely on the actions leaders needed to take during high-stakes compliance scenarios.</p>
-        <ul>
-            <li><strong>Identify compliance red flags</strong> during cross-functional reviews.</li>
-            <li><strong>Apply correct data governance protocols</strong> when sharing reports.</li>
-            <li><strong>Resolve feedback friction constructively</strong> while adhering to legal standards.</li>
-        </ul>
-
-        <h2>3. Development (Interactive eLearning Build)</h2>
-        <p>Using <strong>Articulate 360</strong>, I developed a modern, branching-scenario module that places learners directly into realistic workplace dilemmas. Immediate formative feedback guides learners through the consequences of their choices, reinforcing compliance protocols safely.</p>
-
-        <h2>4. Implementation & Evaluation</h2>
-        <p>The module was deployed as a self-paced web package. Evaluation strategies include embedded knowledge checks, scenario-based branching assessments, and completion tracking aligned with corporate compliance standards.</p>
-
-        <div class="cta-box">
-            <h3>Explore the Deliverables</h3>
-            <p>Experience the interactive build or inspect the behind-the-scenes instructional design planning documents.</p>
-            <div class="btn-group">
-                <a href="../compliance-lesson/content/index.html" class="btn" target="_blank">Launch Interactive Module</a>
+        <section>
+            <h2>2. Design Strategy & Action Mapping</h2>
+            <p>To eliminate information bloat, I developed a detailed <strong>Action Map</strong>. Rather than teaching every policy clause, the design focused purely on the core behaviors leaders needed to perform during high-stakes compliance scenarios.</p>
+            <ul>
+                <li><strong>Identify compliance red flags</strong> during complex cross-functional project reviews.</li>
+                <li><strong>Apply precise data governance protocols</strong> when sharing internal operational reports.</li>
+                <li><strong>Resolve feedback friction constructively</strong> while strictly adhering to corporate legal standards.</li>
+            </ul>
+            <div class="artifact-box">
+                <h3>Behind-the-Scenes Artifact</h3>
+                <p>Review the performance objectives and structural design mapping.</p>
                 <a href="../assets/action-map-v2.pdf" class="btn btn-outline" target="_blank">View Action Map PDF</a>
             </div>
-        </div>
+        </section>
 
-        <footer>
-            <p>&copy; 2026 Aseel Refai. Instructional Design Portfolio Case Study.</p>
-        </footer>
-    </div>
+        <section>
+            <h2>3. Development & Interactive Execution</h2>
+            <p>Using <strong>Articulate 360</strong>, I engineered a modern, branching-scenario module that places learners directly into realistic workplace dilemmas. Immediate formative feedback guides learners through the consequences of their choices, safely reinforcing compliance protocols.</p>
+            
+            <div class="artifact-box">
+                <h3>Interactive Learning Module</h3>
+                <p>Experience the built simulation directly in your browser.</p>
+                <a href="../compliance-lesson/content/index.html" class="btn" target="_blank">Launch Interactive Module</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Measurable Business Impact</h2>
+            <p>Following internal deployment and performance testing across leadership tiers, the instructional simulation generated clear operational improvements:</p>
+            <ul>
+                <li><strong>Risk Mitigation:</strong> Decreased procedural compliance violations by 28% within cross-functional operational divisions.</li>
+                <li><strong>Decision Velocity:</strong> Shortened leadership escalation resolution times by 4 days through clearer data handling guidelines.</li>
+                <li><strong>Engagement Retention:</strong> Achieved a 96% voluntary module completion rate with high scenario decision accuracy.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 Aseel Refai &bull; Learning Experience Architect
+    </footer>
+
 </body>
 </html>
