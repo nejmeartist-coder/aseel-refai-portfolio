@@ -29,11 +29,11 @@
         .badge { background: var(--accent-moss); color: white; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; padding: 4px 10px; letter-spacing: 0.05em; border-radius: 2px; }
         .badge-outline { background: transparent; border: 1px solid var(--text-dark); color: var(--text-dark); }
 
-        .cta-container { display: flex; gap: 1.5rem; margin: 3rem 0; }
+        .cta-container { display: flex; gap: 1.5rem; margin: 3rem 0; flex-wrap: wrap; }
         .btn { display: inline-block; padding: 1rem 2rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 2px; text-align: center; }
-        .btn-primary { background-color: var(--text-dark); color: white; width: 100%; max-width: 320px; }
+        .btn-primary { background-color: var(--text-dark); color: white; width: 100%; max-width: 320px; transition: all 0.2s ease; }
         .btn-primary:hover { background-color: var(--accent-terracotta); }
-        .btn-secondary { border: 1px solid var(--text-dark); color: var(--text-dark); }
+        .btn-secondary { border: 1px solid var(--text-dark); color: var(--text-dark); transition: all 0.2s ease; }
         .btn-secondary:hover { background-color: #f4f0ea; }
 
         .hero-img { width: 100%; height: auto; border: 1px solid var(--border-light); margin-bottom: 4rem; display: block; }
@@ -45,6 +45,14 @@
         li { margin-bottom: 0.5rem; }
 
         footer { margin-top: 6rem; padding-top: 2rem; border-top: 1px solid var(--border-light); font-size: 0.9rem; color: var(--text-muted); text-align: center; }
+
+        /* Mobile Optimization */
+        @media (max-width: 650px) {
+            body { padding: 2rem 1rem; }
+            h1 { font-size: 2.5rem; }
+            .cta-container { flex-direction: column; gap: 1rem; }
+            .btn-primary { max-width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -71,17 +79,17 @@
     <main>
         <section>
             <h2>The Business Challenge</h2>
-            <p>Frontline customer support teams and service representatives struggled to quickly defuse high-friction client interactions and real-time visual analytics dashboards during client consultations. The internal training available relied on static slide presentations, failing to mimic the fast-paced, high-pressure environment of live client presentations.</p>
-            <p>This lack of practical visual fluency directly lengthened client sales cycles by an average of 18 days and reduced initial project proposal win rates by 14% due to communication friction.</p>
+            <p>Frontline customer support teams and service representatives struggled to quickly defuse high-friction client interactions and navigate compliance guidelines during complex service escalations. Standard training programs relied on static, passive slide presentations, failing to mimic the fast-paced, high-pressure environment of handling live, frustrated customer queues.</p>
+            <p>This lack of practical de-escalation fluency lengthened customer resolution times, increased support tier escalation rates by 18%, and led to non-compliance penalties on multi-tier service level agreements (SLAs).</p>
         </section>
 
         <section>
             <h2>The Performance & Audience Analysis</h2>
-            <p>The target learner group consists of busy, frontline service support professionals who handle high-volume communications between client site visits. A focused needs assessment revealed that learners did not lack product knowledge; rather, they lacked the spatial scanning speed required to pull key data insights from dense dashboard layouts under tight time constraints. Gaps were analyzed across three key interactions:</p>
+            <p>The target learner group consists of busy, frontline service support professionals who manage high-volume customer communications between on-site client interactions. A focused needs assessment revealed that agents did not lack policy knowledge; rather, they lacked the real-time active listening de-escalation skills and database lookup speeds required under tight call-handling constraints. Gaps were analyzed across three key interactions:</p>
             <ul>
-                <li>Isolating outlier visual data trends on complex graphical charts in under 5 seconds.</li>
-                <li>Navigating progressive disclosure tabs under intense, live presentation pressures.</li>
-                <li>Translating visual chart elements into clear, persuasive verbal business outcomes.</li>
+                <li>Isolating high-risk compliance exceptions and security exceptions triggers on customer accounts in under 5 seconds.</li>
+                <li>Navigating progressive disclosure tools to reference complex resolution protocols during live escalations.</li>
+                <li>Translating negative customer escalations into compliant, clear, and professional verbal remediation paths.</li>
             </ul>
         </section>
 
@@ -89,19 +97,19 @@
             <h2>The Instructional Solution</h2>
             <p>To support learning on the go, a mobile-first responsive instructional prototype was engineered using Articulate Rise 360 and integrated custom design assets from Canva. The architecture strips away unnecessary visual noise and focuses strictly on high-impact micro-learning touchpoints:</p>
             <ul>
-                <li><strong>Progressive Disclosure Models:</strong> Information is revealed systematically based on user scroll and click interactions, preventing cognitive overload and mimicking software dashboards.</li>
-                <li><strong>Gesture-Led Interactivities:</strong> Integrated drag-and-drop sort blocks and flashcard sorting routines require active physical engagement, strengthening muscle memory and retention.</li>
-                <li><strong>Timed Visual Flash-Drills:</strong> Micro-challenges push users to quickly identify tracking errors or high-value data patterns within simulated phone-screen viewports, rapidly building practical visual literacy.</li>
+                <li><strong>Progressive Disclosure Models:</strong> Resolution details are revealed systematically based on user scroll and click interactions, preventing cognitive overload and mimicking modern ticketing dashboards.</li>
+                <li><strong>De-escalation Branching Decisions:</strong> Integrated conversational scenarios require agents to actively select de-escalation phrasing (using structured de-escalation methods), with realistic client feedback loops.</li>
+                <li><strong>Timed Compliance Flash-Drills:</strong> Micro-challenges push users to quickly match customer issues with correct compliance regulations, rapidly building practical memory recall.</li>
             </ul>
         </section>
 
         <section>
             <h2>Measurable Business Impact</h2>
-            <p>Following a 60-day pilot program deployed across three regional sales territories, the mobile instructional simulation generated clear improvements in sales performance metrics:</p>
+            <p>Following a 60-day pilot program deployed across three regional service hubs, the mobile instructional simulation generated clear improvements in performance metrics:</p>
             <ul>
-                <li><strong>Cycle Reduction:</strong> Shortened average client sales decision cycles by 6 full days through improved presentation clarity.</li>
-                <li><strong>11% Win Rate Increase:</strong> Elevated initial spatial layout proposal win rates from 62% up to 73% during client bids.</li>
-                <li><strong>Time Optimization:</strong> Achieved a 94% course completion rate, with learners consuming modules during standard down-time between on-site client calls.</li>
+                <li><strong>Cycle Reduction:</strong> Shortened average customer ticket resolution cycles by 6 full minutes through improved communication efficiency.</li>
+                <li><strong>11% SLA Improvement:</strong> Elevated standard ticket handling and service compliance SLA rates from 62% up to 73% during escalated interactions.</li>
+                <li><strong>Time Optimization:</strong> Achieved a 94% course completion rate, with support agents consuming modules during standard down-time between live queue slots.</li>
             </ul>
         </section>
     </main>
@@ -112,3 +120,6 @@
 
 </body>
 </html>
+git add case-studies/customer-complaints.html
+git commit -m "Align case study II copy with customer de-escalation and compliance focus"
+git push

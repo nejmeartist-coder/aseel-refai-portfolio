@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study III | Leadership & Compliance eLearning Module</title>
     <style>
-
         :root {
             --bg-canvas: #fcfbf9;
             --text-dark: #111215;
@@ -23,18 +22,18 @@
         .back-link:hover { color: var(--accent-terracotta); }
         
         header { margin-bottom: 4rem; padding-bottom: 2rem; border-bottom: 2px solid var(--text-dark); }
-        .meta-label { font-size: 0.85rem; text-transform: uppercase; tracking: 0.1em; color: var(--accent-terracotta); font-weight: 700; margin-bottom: 0.5rem; }
+        .meta-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-terracotta); font-weight: 700; margin-bottom: 0.5rem; }
         h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; }
         
         .badge-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; }
         .badge { background: var(--accent-moss); color: white; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; padding: 4px 10px; letter-spacing: 0.05em; border-radius: 2px; }
         .badge-outline { background: transparent; border: 1px solid var(--text-dark); color: var(--text-dark); }
 
-        .cta-container { display: flex; gap: 1.5rem; margin: 3rem 0; }
-        .btn { display: inline-block; padding: 1rem 2rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; tracking: 0.05em; border-radius: 2px; text-align: center; }
-        .btn-primary { background-color: var(--text-dark); color: white; width: 100%; max-width: 320px; }
+        .cta-container { display: flex; gap: 1.5rem; margin: 3rem 0; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 1rem 2rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 2px; text-align: center; }
+        .btn-primary { background-color: var(--text-dark); color: white; width: 100%; max-width: 320px; transition: all 0.2s ease; }
         .btn-primary:hover { background-color: var(--accent-terracotta); }
-        .btn-secondary { border: 1px solid var(--text-dark); color: var(--text-dark); }
+        .btn-secondary { border: 1px solid var(--text-dark); color: var(--text-dark); transition: all 0.2s ease; }
         .btn-secondary:hover { background-color: #f4f0ea; }
 
         .hero-img { width: 100%; height: auto; border: 1px solid var(--border-light); margin-bottom: 4rem; display: block; }
@@ -46,55 +45,71 @@
         li { margin-bottom: 0.5rem; }
 
         footer { margin-top: 6rem; padding-top: 2rem; border-top: 1px solid var(--border-light); font-size: 0.9rem; color: var(--text-muted); text-align: center; }
-    
+
+        /* Mobile Optimization */
+        @media (max-width: 650px) {
+            body { padding: 2rem 1rem; }
+            h1 { font-size: 2.5rem; }
+            .cta-container { flex-direction: column; gap: 1rem; }
+            .btn-primary { max-width: 100%; }
+        }
     </style>
 </head>
 <body>
-    <main class="container">
-        <a href="../index.html" class="back-link">&larr; Return to Portfolio Index</a>
-        
-        <h1>Case Study III: Leadership & Compliance eLearning Module</h1>
-        <p class="subtitle">An interactive, scenario-driven compliance training built using the ADDIE instructional design framework and Articulate 360.</p>
 
+    <a href="../index.html" class="back-link">&larr; Return to Exhibition Gallery</a>
+
+    <header>
+        <div class="meta-label">Case Study III &bull; Corporate Governance</div>
+        <h1>Leadership & Compliance eLearning Module</h1>
+        <div class="badge-row">
+            <div class="badge">Articulate 360</div>
+            <div class="badge">Action Mapping</div>
+            <div class="badge badge-outline">ADDIE Framework</div>
+        </div>
+    </header>
+
+    <img src="../assets/img/case3-thumbnail.png" alt="Compliance Module Prototype Layout" class="hero-img">
+
+    <div class="cta-container">
+        <a href="../compliance-lesson/content/index.html" target="_blank" class="btn btn-primary">🚀 Launch Interactive Module</a>
+        <a href="../assets/action-map-v2.pdf" target="_blank" class="btn btn-secondary">📄 View Action Map (PDF)</a>
+    </div>
+
+    <main>
         <section>
-            <h2>1. Analysis & Problem Scope</h2>
-            <p>Organization leaders faced growing compliance risks due to unstructured cross-functional feedback workflows and gaps in data privacy handling. Traditional compliance training relied on passive slide decks, resulting in low knowledge retention and recurring operational errors.</p>
-            <p><strong>Target Audience:</strong> Mid-level managers and team leads who require practical, decision-making capabilities rather than rote memorization of enterprise policies.</p>
+            <h2>The Business Challenge</h2>
+            <p>Organization leaders faced growing compliance risks due to unstructured cross-functional feedback workflows and gaps in data privacy handling. Traditional compliance training programs relied heavily on passive, slide-based legal documents, resulting in low practical knowledge retention and recurring operational errors in data security.</p>
+            <p>Mid-level managers and team leads require practical, high-stakes decision-making capabilities rather than rote memorization of passive legal guidelines during active operations.</p>
         </section>
 
         <section>
-            <h2>2. Design Strategy & Action Mapping</h2>
-            <p>To eliminate information bloat, I developed a detailed <strong>Action Map</strong>. Rather than teaching every policy clause, the design focused purely on the core behaviors leaders needed to perform during high-stakes compliance scenarios.</p>
+            <h2>The Performance & Audience Analysis</h2>
+            <p>To target this group effectively, a detailed behavioral needs assessment was developed. Gaps were mapped directly to core performance requirements, targeting specific actions leaders must take during key compliance exceptions:</p>
             <ul>
-                <li><strong>Identify compliance red flags</strong> during complex cross-functional project reviews.</li>
-                <li><strong>Apply precise data governance protocols</strong> when sharing internal operational reports.</li>
-                <li><strong>Resolve feedback friction constructively</strong> while strictly adhering to corporate legal standards.</li>
+                <li><strong>Compliance Red Flags:</strong> Identifying regulatory red flags in real-time during complex cross-functional review processes.</li>
+                <li><strong>Data Governance Protocols:</strong> Applying exact security and sharing protocols when routing operational documents and reports.</li>
+                <li><strong>Feedback Friction:</strong> Resolving feedback and operational friction constructively while adhering strictly to regional privacy policies.</li>
             </ul>
-            <div class="artifact-box">
-                <h3>Behind-the-Scenes Artifact</h3>
-                <p>Review the performance objectives and structural design mapping.</p>
-                <a href="../assets/action-map-v2.pdf" class="btn btn-outline" target="_blank">View Action Map PDF</a>
-            </div>
         </section>
 
         <section>
-            <h2>3. Development & Interactive Execution</h2>
-            <p>Using <strong>Articulate 360</strong>, I engineered a modern, branching-scenario module that places learners directly into realistic workplace dilemmas. Immediate formative feedback guides learners through the consequences of their choices, safely reinforcing compliance protocols.</p>
-            
-            <div class="artifact-box">
-                <h3>Interactive Learning Module</h3>
-                <p>Experience the built simulation directly in your browser.</p>
-                <a href="../compliance-lesson/content/index.html" class="btn" target="_blank">Launch Interactive Module</a>
-            </div>
+            <h2>The Instructional Solution</h2>
+            <p>Designed and built using the ADDIE framework, an interactive branching-scenario module was engineered in Articulate Storyline 360 to put learners directly into realistic workplace dilemmas. The simulation uses immediate formative feedback to guide decision paths safely:</p>
+            <ul>
+                <li><strong>Branching Decision Paths:</strong> Leaders encounter realistic cross-functional scenarios where they must make active choices, viewing the direct impact of their selections on visual meters.</li>
+                <li><strong>Diagnostic Feedback Loops:</strong> Formative feedback blocks safely explain the regulatory consequences of errors, building solid mental frameworks without triggering actual organizational risk.</li>
+                <li><strong>Structured Performance Anchors:</strong> Policy documents are integrated directly within the scenario, teaching leaders how to reference compliance guidelines under pressure rather than relying on memorization.</li>
+            </ul>
         </section>
 
         <section>
             <h2>Measurable Business Impact</h2>
-            <p>Following internal deployment and performance testing across leadership tiers, the instructional simulation generated clear operational improvements:</p>
+            <p>Following internal deployment and compliance testing across target management divisions, the branching instructional prototype generated clear operational improvements:</p>
             <ul>
-                <li><strong>Risk Mitigation:</strong> Decreased procedural compliance violations by 28% within cross-functional operational divisions.</li>
-                <li><strong>Decision Velocity:</strong> Shortened leadership escalation resolution times by 4 days through clearer data handling guidelines.</li>
-                <li><strong>Engagement Retention:</strong> Achieved a 96% voluntary module completion rate with high scenario decision accuracy.</li>
+                <li><strong>28% Risk Mitigation:</strong> Decreased procedural compliance violations by 28% within active cross-functional operational divisions.</li>
+                <li><strong>Escalation Velocity:</strong> Shortened leadership escalation resolution times by 4 full days through clear, actionable data handling guidelines.</li>
+                <li><strong>High Voluntary Engagement:</strong> Achieved a 96% voluntary module completion rate, coupled with high initial scenario decision accuracy.</li>
             </ul>
         </section>
     </main>
@@ -105,3 +120,6 @@
 
 </body>
 </html>
+git add case-studies/leadership-compliance.html
+git commit -m "Standardize case study III layout to match portfolio design system"
+git push
