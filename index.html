@@ -98,11 +98,11 @@
             justify-content: center;
             background: var(--primary); 
             color: white; 
-            padding: 0.6rem 1.25rem; 
+            padding: 0.55rem 1.15rem; 
             border-radius: 6px; 
             text-decoration: none; 
             font-weight: 500; 
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             transition: all 0.2s ease;
         }
         .btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
@@ -270,7 +270,6 @@
             <div class="card">
                 <div class="about-grid">
                     <div class="about-img-wrap">
-                        <!-- Points directly to assets/img/aseel-headshot.png with fallback check -->
                         <img id="headshot-img" 
                              src="assets/img/aseel-headshot.png" 
                              alt="Aseel Refai" 
@@ -303,16 +302,16 @@
                     <p class="tools-tag">Tools & Frameworks: Figma, UI Prototyping, ADDIE, Action Mapping</p>
                     
                     <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.25rem;">
-                        <a href="case-studies/ecommerce-onboarding.html" class="btn" target="_blank">Full Case Study ↗</a>
+                        <a href="case-studies/ecommerce-onboarding.html" class="btn" target="_blank">Read Case Study ↗</a>
                         <a href="case-studies/onboarding-curriculum.html" class="btn btn-outline" target="_blank">Curriculum Document ↗</a>
                     </div>
 
                     <div class="embed-wrapper">
-                        <!-- 1. Embedded Figma Slides / Module -->
+                        <!-- 1. Embedded Figma Interactive Slides -->
                         <div class="embed-box">
                             <div class="embed-header">
                                 <span>🎨 Interactive Figma Module: UI Layouts</span>
-                                <a href="https://embed.figma.com/slides/aefxOtJqoXBAEsD6Lz5w3p/E-Commerce-New-Hire-Onboarding-Matrix-UI-Layouts?embed-host=share" target="_blank">Open in Figma ↗</a>
+                                <a href="https://embed.figma.com/slides/aefxOtJqoXBAEsD6Lz5w3p/E-Commerce-New-Hire-Onboarding-Matrix-UI-Layouts?embed-host=share" target="_blank">Open Fullscreen ↗</a>
                             </div>
                             <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" 
                                     width="100%" 
@@ -323,11 +322,11 @@
                             </iframe>
                         </div>
 
-                        <!-- 2. Embedded Onboarding Curriculum HTML Document -->
+                        <!-- 2. Embedded Onboarding Curriculum Document -->
                         <div class="embed-box">
                             <div class="embed-header">
                                 <span>📄 Onboarding Curriculum Document</span>
-                                <a href="case-studies/onboarding-curriculum.html" target="_blank">Open Document Fullscreen ↗</a>
+                                <a href="case-studies/onboarding-curriculum.html" target="_blank">Open Fullscreen ↗</a>
                             </div>
                             <iframe src="case-studies/onboarding-curriculum.html" class="embed-frame" height="460" loading="lazy"></iframe>
                         </div>
@@ -347,12 +346,13 @@
                     <p class="tools-tag">Tools & Frameworks: Articulate Rise, Compliance Mapping, ADDIE</p>
                     
                     <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.25rem;">
-                        <a href="case-studies/customer-complaints.html" class="btn" target="_blank">Full Case Study ↗</a>
+                        <a href="case-studies/customer-complaints.html" class="btn" target="_blank">Read Case Study ↗</a>
                         <a href="rise-lesson/index.html" class="btn btn-outline" target="_blank">Launch Rise Module ↗</a>
+                        <a href="assets/data-compliance-doc.pdf" class="btn btn-outline" target="_blank">Data Compliance Doc (PDF) ↗</a>
                     </div>
 
                     <div class="embed-wrapper">
-                        <!-- 1. Embedded Articulate Rise Module -->
+                        <!-- 1. Embedded Interactive Articulate Rise Module -->
                         <div class="embed-box">
                             <div class="embed-header">
                                 <span>🖥️ Interactive Articulate Rise Module</span>
@@ -361,13 +361,15 @@
                             <iframe src="rise-lesson/index.html" class="embed-frame" height="520" loading="lazy" allowfullscreen></iframe>
                         </div>
 
-                        <!-- 2. Embedded Customer Complaints / Compliance Case Study Document -->
+                        <!-- 2. Embedded Data Compliance PDF -->
                         <div class="embed-box">
                             <div class="embed-header">
-                                <span>📄 Customer Support & Complaints Case Document</span>
-                                <a href="case-studies/customer-complaints.html" target="_blank">Open Document Fullscreen ↗</a>
+                                <span>📄 Data Compliance Document (PDF)</span>
+                                <a href="assets/data-compliance-doc.pdf" target="_blank">Open / Download PDF ↗</a>
                             </div>
-                            <iframe src="case-studies/customer-complaints.html" class="embed-frame" height="460" loading="lazy"></iframe>
+                            <iframe src="assets/data-compliance-doc.pdf#view=FitH" class="embed-frame" height="480" loading="lazy">
+                                <p>Your browser does not support embedded PDFs. <a href="assets/data-compliance-doc.pdf" target="_blank">Click here to view the PDF.</a></p>
+                            </iframe>
                         </div>
                     </div>
                 </div>
@@ -385,8 +387,9 @@
                     <p class="tools-tag">Tools & Frameworks: Articulate 360, Branching Scenarios, Action Mapping</p>
                     
                     <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.25rem;">
-                        <a href="case-studies/leadership-complaince.html" class="btn" target="_blank">Full Case Study & Storyboard ↗</a>
+                        <a href="case-studies/leadership-compliance.html" class="btn" target="_blank">Read Case Study ↗</a>
                         <a href="compliance-lesson/content/index.html" class="btn btn-outline" target="_blank">Launch Scenario Module ↗</a>
+                        <a href="assets/action-map-v2.pdf" class="btn btn-outline" target="_blank">Action Map (PDF) ↗</a>
                     </div>
 
                     <div class="embed-wrapper">
@@ -394,18 +397,30 @@
                         <div class="embed-box">
                             <div class="embed-header">
                                 <span>🖥️ Interactive Scenario eLearning Module</span>
-                                <a href="compliance-lesson/content/index.html" target="_blank">Full Screen ↗</a>
+                                <a href="compliance-lesson/content/index.html" id="storyline-link" target="_blank">Full Screen ↗</a>
                             </div>
-                            <iframe src="compliance-lesson/content/index.html" class="embed-frame" height="560" loading="lazy" allowfullscreen></iframe>
+                            <!-- Embeds compliance-lesson/content/index.html with auto-check for compliance-lesson/index.html -->
+                            <iframe id="storyline-frame" src="compliance-lesson/content/index.html" class="embed-frame" height="560" loading="lazy" allowfullscreen></iframe>
                         </div>
 
-                        <!-- 2. Embedded Leadership Compliance Storyboard Document -->
+                        <!-- 2. Embedded Case Study HTML -->
                         <div class="embed-box">
                             <div class="embed-header">
-                                <span>📄 Leadership & Compliance Storyboard / Scenario Map</span>
-                                <a href="case-studies/leadership-complaince.html" target="_blank">Open Storyboard Fullscreen ↗</a>
+                                <span>📄 Leadership & Compliance Case Study</span>
+                                <a href="case-studies/leadership-compliance.html" target="_blank">Open Fullscreen ↗</a>
                             </div>
-                            <iframe src="case-studies/leadership-complaince.html" class="embed-frame" height="460" loading="lazy"></iframe>
+                            <iframe src="case-studies/leadership-compliance.html" class="embed-frame" height="460" loading="lazy"></iframe>
+                        </div>
+
+                        <!-- 3. Embedded Action Map PDF -->
+                        <div class="embed-box">
+                            <div class="embed-header">
+                                <span>🗺️ Instructional Design Action Map (PDF)</span>
+                                <a href="assets/action-map-v2.pdf" target="_blank">Open / Download PDF ↗</a>
+                            </div>
+                            <iframe src="assets/action-map-v2.pdf#view=FitH" class="embed-frame" height="480" loading="lazy">
+                                <p>Your browser does not support embedded PDFs. <a href="assets/action-map-v2.pdf" target="_blank">Click here to view the Action Map.</a></p>
+                            </iframe>
                         </div>
                     </div>
                 </div>
@@ -418,5 +433,22 @@
         </footer>
     </div>
 
+    <!-- Script to verify Storyline path if content/ subfolder differs -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const storylineFrame = document.getElementById('storyline-frame');
+            const storylineLink = document.getElementById('storyline-link');
+            
+            fetch('compliance-lesson/content/index.html', { method: 'HEAD' })
+                .then(res => {
+                    if (!res.ok) {
+                        // If content/index.html is not found, fallback to root compliance-lesson/index.html
+                        storylineFrame.src = 'compliance-lesson/index.html';
+                        storylineLink.href = 'compliance-lesson/index.html';
+                    }
+                })
+                .catch(() => {});
+        });
+    </script>
 </body>
-</html>
+</html>              
