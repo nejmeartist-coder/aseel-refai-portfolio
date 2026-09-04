@@ -128,7 +128,7 @@
         }
         .card h3 { font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text); }
         
-        /* About Me Card Styling */
+        /* About Me Styling */
         .about-grid {
             display: flex;
             align-items: center;
@@ -175,7 +175,7 @@
             letter-spacing: 0.03em;
         }
         
-        /* Embed Containers */
+        /* Embed Styling */
         .embed-wrapper {
             margin-top: 1.5rem;
             display: flex;
@@ -270,12 +270,12 @@
             <div class="card">
                 <div class="about-grid">
                     <div class="about-img-wrap">
-                        <!-- Auto-detects aseel-headshot.png in assets/ or root with all case variations -->
+                        <!-- Points directly to assets/img/aseel-headshot.png with fallback check -->
                         <img id="headshot-img" 
-                             src="assets/aseel-headshot.png" 
+                             src="assets/img/aseel-headshot.png" 
                              alt="Aseel Refai" 
                              class="about-img"
-                             onerror="tryNextHeadshot(this)">
+                             onerror="this.onerror=null; this.src='assets/img/Aseel-Headshot.png';">
                     </div>
                     <div class="about-text">
                         <p>I am a technical Instructional Designer and Learning Experience Specialist focused on building intuitive, software-driven employee onboarding frameworks. My design approach pairs instructional psychology models (ADDIE/SAM) with crisp visual layouts to reduce student cognitive load.</p>
@@ -303,39 +303,33 @@
                     <p class="tools-tag">Tools & Frameworks: Figma, UI Prototyping, ADDIE, Action Mapping</p>
                     
                     <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.25rem;">
-                        <a href="case-studies/ecommerce-onboarding.html" class="btn">Read Case Study</a>
-                        <a href="https://figma.com" class="btn btn-outline" target="_blank">Figma Deck ↗</a>
-                        <a href="case-studies/onboarding-curriculum.pdf" class="btn btn-outline" target="_blank">Curriculum PDF ↗</a>
+                        <a href="case-studies/ecommerce-onboarding.html" class="btn" target="_blank">Full Case Study ↗</a>
+                        <a href="case-studies/onboarding-curriculum.html" class="btn btn-outline" target="_blank">Curriculum Document ↗</a>
                     </div>
 
                     <div class="embed-wrapper">
-                        <!-- 1. Embedded Figma Interactive Prototype -->
+                        <!-- 1. Embedded Figma Slides / Module -->
                         <div class="embed-box">
                             <div class="embed-header">
-                                <span>🎨 Interactive Figma Prototype & Deck</span>
-                                <a href="https://figma.com" target="_blank">Open Figma ↗</a>
+                                <span>🎨 Interactive Figma Module: UI Layouts</span>
+                                <a href="https://embed.figma.com/slides/aefxOtJqoXBAEsD6Lz5w3p/E-Commerce-New-Hire-Onboarding-Matrix-UI-Layouts?embed-host=share" target="_blank">Open in Figma ↗</a>
                             </div>
-                            <!-- Note: Replace the URL below with your exact Figma file/prototype share link if available -->
-                            <iframe id="figma-embed"
-                                    src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com" 
-                                    class="embed-frame" 
+                            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" 
+                                    width="100%" 
                                     height="460" 
-                                    allowfullscreen>
+                                    src="https://embed.figma.com/slides/aefxOtJqoXBAEsD6Lz5w3p/E-Commerce-New-Hire-Onboarding-Matrix-UI-Layouts?embed-host=share" 
+                                    allowfullscreen 
+                                    class="embed-frame">
                             </iframe>
                         </div>
 
-                        <!-- 2. Embedded Onboarding Curriculum Document -->
+                        <!-- 2. Embedded Onboarding Curriculum HTML Document -->
                         <div class="embed-box">
                             <div class="embed-header">
                                 <span>📄 Onboarding Curriculum Document</span>
-                                <a href="case-studies/onboarding-curriculum.pdf" target="_blank">Open / Download PDF ↗</a>
+                                <a href="case-studies/onboarding-curriculum.html" target="_blank">Open Document Fullscreen ↗</a>
                             </div>
-                            <iframe id="doc-frame-1" 
-                                    data-pdf="case-studies/onboarding-curriculum.pdf" 
-                                    class="embed-frame pdf-frame" 
-                                    height="480" 
-                                    loading="lazy">
-                            </iframe>
+                            <iframe src="case-studies/onboarding-curriculum.html" class="embed-frame" height="460" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
@@ -353,13 +347,12 @@
                     <p class="tools-tag">Tools & Frameworks: Articulate Rise, Compliance Mapping, ADDIE</p>
                     
                     <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.25rem;">
-                        <a href="case-studies/compliance-lesson.html" class="btn">Read Case Study</a>
+                        <a href="case-studies/customer-complaints.html" class="btn" target="_blank">Full Case Study ↗</a>
                         <a href="rise-lesson/index.html" class="btn btn-outline" target="_blank">Launch Rise Module ↗</a>
-                        <a href="case-studies/compliance-risk-mitigation.pdf" class="btn btn-outline" target="_blank">Compliance PDF ↗</a>
                     </div>
 
                     <div class="embed-wrapper">
-                        <!-- 1. Embedded Interactive Articulate Rise Module -->
+                        <!-- 1. Embedded Articulate Rise Module -->
                         <div class="embed-box">
                             <div class="embed-header">
                                 <span>🖥️ Interactive Articulate Rise Module</span>
@@ -368,18 +361,13 @@
                             <iframe src="rise-lesson/index.html" class="embed-frame" height="520" loading="lazy" allowfullscreen></iframe>
                         </div>
 
-                        <!-- 2. Embedded Compliance Risk Mitigation Document -->
+                        <!-- 2. Embedded Customer Complaints / Compliance Case Study Document -->
                         <div class="embed-box">
                             <div class="embed-header">
-                                <span>📄 Compliance & Risk Mitigation Documentation</span>
-                                <a href="case-studies/compliance-risk-mitigation.pdf" target="_blank">Open / Download PDF ↗</a>
+                                <span>📄 Customer Support & Complaints Case Document</span>
+                                <a href="case-studies/customer-complaints.html" target="_blank">Open Document Fullscreen ↗</a>
                             </div>
-                            <iframe id="doc-frame-2" 
-                                    data-pdf="case-studies/compliance-risk-mitigation.pdf" 
-                                    class="embed-frame pdf-frame" 
-                                    height="480" 
-                                    loading="lazy">
-                            </iframe>
+                            <iframe src="case-studies/customer-complaints.html" class="embed-frame" height="460" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
@@ -397,34 +385,27 @@
                     <p class="tools-tag">Tools & Frameworks: Articulate 360, Branching Scenarios, Action Mapping</p>
                     
                     <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.25rem;">
-                        <a href="case-studies/compliance-lesson.html" class="btn">Read Case Study</a>
+                        <a href="case-studies/leadership-complaince.html" class="btn" target="_blank">Full Case Study & Storyboard ↗</a>
                         <a href="compliance-lesson/content/index.html" class="btn btn-outline" target="_blank">Launch Scenario Module ↗</a>
-                        <a href="case-studies/storyboard.pdf" id="storyboard-btn" class="btn btn-outline" target="_blank">Storyboard PDF ↗</a>
                     </div>
 
                     <div class="embed-wrapper">
-                        <!-- 1. Embedded Interactive Articulate Storyline Module -->
+                        <!-- 1. Embedded Articulate Storyline Interactive Module -->
                         <div class="embed-box">
                             <div class="embed-header">
                                 <span>🖥️ Interactive Scenario eLearning Module</span>
                                 <a href="compliance-lesson/content/index.html" target="_blank">Full Screen ↗</a>
                             </div>
-                            <iframe src="compliance-lesson/content/index.html" class="embed-frame" height="580" loading="lazy" allowfullscreen></iframe>
+                            <iframe src="compliance-lesson/content/index.html" class="embed-frame" height="560" loading="lazy" allowfullscreen></iframe>
                         </div>
 
-                        <!-- 2. Embedded Case Study III Storyboard Document -->
+                        <!-- 2. Embedded Leadership Compliance Storyboard Document -->
                         <div class="embed-box">
                             <div class="embed-header">
-                                <span>📄 Instructional Design Storyboard & Scenario Map</span>
-                                <a href="case-studies/storyboard.pdf" id="storyboard-link" target="_blank">Open / Download PDF ↗</a>
+                                <span>📄 Leadership & Compliance Storyboard / Scenario Map</span>
+                                <a href="case-studies/leadership-complaince.html" target="_blank">Open Storyboard Fullscreen ↗</a>
                             </div>
-                            <!-- Looks for case-studies/storyboard.pdf or compliance-storyboard.pdf -->
-                            <iframe id="doc-frame-3" 
-                                    data-pdf="case-studies/storyboard.pdf" 
-                                    class="embed-frame pdf-frame" 
-                                    height="480" 
-                                    loading="lazy">
-                            </iframe>
+                            <iframe src="case-studies/leadership-complaince.html" class="embed-frame" height="460" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
@@ -437,66 +418,5 @@
         </footer>
     </div>
 
-    <!-- Universal Embed & Asset Detection Scripts -->
-    <script>
-        // 1. HEADSHOT MULTI-PATH DETECTOR:
-        // Automatically tests all possible paths/capitalizations until the photo loads.
-        const headshotVariations = [
-            'assets/aseel-headshot.png',
-            'aseel-headshot.png',
-            'assets/Aseel-Headshot.png',
-            'Aseel-Headshot.png',
-            'assets/aseel-headshot.PNG',
-            'aseel-headshot.PNG',
-            'assets/aseel-headshot.jpg',
-            'aseel-headshot.jpg'
-        ];
-        let currentHeadshotStep = 0;
-        function tryNextHeadshot(imgElement) {
-            currentHeadshotStep++;
-            if (currentHeadshotStep < headshotVariations.length) {
-                imgElement.src = headshotVariations[currentHeadshotStep];
-            }
-        }
-
-        // 2. UNIVERSAL PDF LOADER:
-        // Raw PDF iframes fail on mobile Safari/Chrome. This converts them to the universal viewer
-        // on live GitHub Pages while preserving local paths when testing locally.
-        document.addEventListener('DOMContentLoaded', function() {
-            const pdfFrames = document.querySelectorAll('.pdf-frame');
-            pdfFrames.forEach(function(frame) {
-                const relativePath = frame.getAttribute('data-pdf');
-                if (window.location.protocol.startsWith('http')) {
-                    const absolutePdfUrl = new URL(relativePath, window.location.href).href;
-                    frame.src = 'https://docs.google.com/viewer?url=' + encodeURIComponent(absolutePdfUrl) + '&embedded=true';
-                } else {
-                    frame.src = relativePath;
-                }
-            });
-
-            // Check if Storyboard file in Case Study III has an alternate name
-            const sbFrame = document.getElementById('doc-frame-3');
-            const sbBtn = document.getElementById('storyboard-btn');
-            const sbLink = document.getElementById('storyboard-link');
-            
-            // If you named your file compliance-storyboard.pdf or leadership-storyboard.pdf, 
-            // you can also set it directly here:
-            const altStoryboardPath = 'case-studies/compliance-storyboard.pdf';
-            fetch('case-studies/storyboard.pdf', { method: 'HEAD' }).then(res => {
-                if (!res.ok) {
-                    // Fallback to alternate naming if storyboard.pdf wasn't found
-                    if (window.location.protocol.startsWith('http')) {
-                        const altUrl = new URL(altStoryboardPath, window.location.href).href;
-                        sbFrame.src = 'https://docs.google.com/viewer?url=' + encodeURIComponent(altUrl) + '&embedded=true';
-                    } else {
-                        sbFrame.src = altStoryboardPath;
-                    }
-                    sbBtn.href = altStoryboardPath;
-                    sbLink.href = altStoryboardPath;
-                }
-            }).catch(() => {});
-        });
-    </script>
 </body>
 </html>
-
