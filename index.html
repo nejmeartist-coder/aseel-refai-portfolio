@@ -37,7 +37,7 @@
             padding: 1rem 2rem;
         }
         .nav-container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -76,11 +76,11 @@
             color: white;
         }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
         
         header { 
             background: var(--card-bg); 
-            padding: 4rem 2rem; 
+            padding: 3.5rem 2rem; 
             border-radius: 12px; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
             margin-bottom: 2.5rem; 
@@ -89,17 +89,20 @@
         }
         header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; font-weight: 800; color: var(--text); }
         header p.subtitle { font-size: 1.3rem; color: var(--primary); font-weight: 600; margin-bottom: 1.25rem; }
-        header p.bio { color: var(--text-muted); max-width: 650px; margin: 0 auto 2rem auto; font-size: 1.05rem; }
+        header p.bio { color: var(--text-muted); max-width: 680px; margin: 0 auto 2rem auto; font-size: 1.05rem; }
         
-        .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .btn-group { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
         .btn { 
-            display: inline-block; 
+            display: inline-flex; 
+            align-items: center;
+            justify-content: center;
             background: var(--primary); 
             color: white; 
-            padding: 0.65rem 1.4rem; 
+            padding: 0.6rem 1.25rem; 
             border-radius: 6px; 
             text-decoration: none; 
             font-weight: 500; 
+            font-size: 0.92rem;
             transition: all 0.2s ease;
         }
         .btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
@@ -109,23 +112,49 @@
         section { scroll-margin-top: 6.5rem; margin-bottom: 3.5rem; }
         section h2 { font-size: 1.6rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; color: var(--text); }
         
-        .grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3.5rem; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3.5rem; }
         
         .card { 
             background: var(--card-bg); 
-            border-radius: 10px; 
+            border-radius: 12px; 
             padding: 2rem; 
             border: 1px solid var(--border); 
             box-shadow: 0 2px 4px rgba(0,0,0,0.01); 
             transition: all 0.25s ease-in-out;
         }
         .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.04);
-            border-color: var(--primary);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+            border-color: #d1d5db;
         }
         .card h3 { font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text); }
         
+        /* About Me Card Styling */
+        .about-grid {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .about-img-wrap {
+            flex-shrink: 0;
+            text-align: center;
+        }
+        .about-img {
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: block;
+        }
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
         .card-details {
             margin: 1.25rem 0;
             display: flex;
@@ -133,36 +162,79 @@
             gap: 0.5rem;
             font-size: 0.95rem;
         }
-        .card-details p {
-            color: var(--text-muted);
-            margin-bottom: 0;
-        }
-        .card-details strong {
-            color: var(--text);
-        }
+        .card-details p { color: var(--text-muted); margin-bottom: 0; }
+        .card-details strong { color: var(--text); }
 
         .tools-tag {
             font-size: 0.85rem; 
-            color: #c25e38; 
+            color: var(--primary); 
             margin-bottom: 1.25rem; 
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.03em;
         }
         
-        .embed-container {
+        /* Embed Containers */
+        .embed-wrapper {
             margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .embed-box {
+            background: #ffffff;
+            border: 1px solid var(--border);
             border-radius: 8px;
             overflow: hidden;
-            border: 1px solid var(--border);
+        }
+        .embed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.65rem 1rem;
             background: #f9fafb;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .embed-header a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.82rem;
+        }
+        .embed-header a:hover {
+            text-decoration: underline;
+        }
+        .embed-frame {
+            width: 100%;
+            border: none;
+            display: block;
+            background: #ffffff;
         }
         
-        footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+        footer { 
+            text-align: center; 
+            color: var(--text-muted); 
+            font-size: 0.85rem; 
+            margin-top: 4rem; 
+            padding-top: 1.5rem; 
+            border-top: 1px solid var(--border); 
+        }
 
-        @media (max-width: 600px) {
+        @media (max-width: 720px) {
             .nav-links { display: none; }
             header h1 { font-size: 2.2rem; }
+            .about-grid {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.25rem;
+            }
+            .about-img {
+                width: 135px;
+                height: 135px;
+            }
         }
     </style>
 </head>
@@ -191,12 +263,23 @@
             </div>
         </header>
 
-        <!-- About Me Section - Moved up higher per recruiter feedback -->
+        <!-- About Me Section -->
         <section id="about">
             <h2>About Me</h2>
             <div class="card">
-                <p style="color: var(--text-muted); margin-bottom: 1rem;">I am a technical Instructional Designer and Learning Experience Specialist focused on building intuitive, software-driven employee onboarding frameworks. My design approach pairs instructional psychology models (ADDIE/SAM) with crisp visual layouts to reduce student cognitive load.</p>
-                <p style="color: var(--text-muted);">With extensive background configuring platform settings and running user reporting tracks for over 500 active organization members, I design learning paths that prioritize data alignment, straightforward user provisioning, and measurable business outcomes.</p>
+                <div class="about-grid">
+                    <div class="about-img-wrap">
+                        <!-- Headshot: Checks assets/aseel-headshot.png first; falls back to root aseel-headshot.png automatically -->
+                        <img src="assets/aseel-headshot.png" 
+                             alt="Aseel Refai" 
+                             class="about-img"
+                             onerror="this.onerror=null; this.src='aseel-headshot.png';">
+                    </div>
+                    <div class="about-text">
+                        <p>I am a technical Instructional Designer and Learning Experience Specialist focused on building intuitive, software-driven employee onboarding frameworks. My design approach pairs instructional psychology models (ADDIE/SAM) with crisp visual layouts to reduce student cognitive load.</p>
+                        <p>With an extensive background configuring platform settings and running user reporting tracks for over 500 active organization members, I design learning paths that prioritize data alignment, straightforward user provisioning, and measurable business outcomes.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -216,58 +299,112 @@
                     </div>
 
                     <p class="tools-tag">Tools & Frameworks: Figma, UI Prototyping, ADDIE, Action Mapping</p>
-                    <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.5rem;">
-                        <a href="case-studies/ecommerce-onboarding.html" class="btn">Read Case Study</a>
-                        <a href="https://figma.com" class="btn btn-outline" target="_blank">Figma Deck</a>
-                        <a href="case-studies/onboarding-curriculum.pdf" class="btn btn-outline" target="_blank">Curriculum Doc</a>
+                    
+                    <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.25rem;">
+                        <a href="case-studies/ecommerce-onboarding.html" class="btn">Read Full Case Study</a>
+                        <a href="case-studies/onboarding-curriculum.pdf" class="btn btn-outline" target="_blank">Open Curriculum PDF ↗</a>
                     </div>
 
-                    <!-- Embedded Inline Curriculum Doc PDF Container -->
-                    <div style="border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb; height: 400px;">
-                        <object data="case-studies/onboarding-curriculum.pdf" type="application/pdf" width="100%" height="100%">
-                            <p>Your browser doesn't support embedding PDFs. <a href="case-studies/onboarding-curriculum.pdf">Click here to view it.</a></p>
-                        </object>
+                    <div class="embed-wrapper">
+                        <!-- Embedded Module / Prototype Preview -->
+                        <div class="embed-box">
+                            <div class="embed-header">
+                                <span>🖥️ Interactive Prototype / Module Preview</span>
+                                <a href="case-studies/ecommerce-onboarding.html" target="_blank">Full Screen ↗</a>
+                            </div>
+                            <iframe src="case-studies/ecommerce-onboarding.html" class="embed-frame" height="420" loading="lazy" allowfullscreen></iframe>
+                        </div>
+
+                        <!-- Embedded Document PDF -->
+                        <div class="embed-box">
+                            <div class="embed-header">
+                                <span>📄 Onboarding Curriculum Document</span>
+                                <a href="case-studies/onboarding-curriculum.pdf" target="_blank">Open / Download PDF ↗</a>
+                            </div>
+                            <iframe src="case-studies/onboarding-curriculum.pdf#view=FitH" class="embed-frame" height="450" loading="lazy">
+                                <p>Your browser does not support embedding PDFs. <a href="case-studies/onboarding-curriculum.pdf" target="_blank">Click here to view it directly.</a></p>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Case Study II -->
                 <div class="card">
                     <h3>Case Study II: Customer Support & Compliance Training</h3>
+                    
                     <div class="card-details">
                         <p><strong>The Challenge:</strong> Staff errors and resolution delays during escalations of sensitive compliance issues.</p>
                         <p><strong>The Solution:</strong> Engineered a scenario-driven module mapped directly to core risk guidelines, featuring mock support resolution paths.</p>
                         <p><strong>Business Impact:</strong> Enhanced operational confidence and decreased regulatory assessment review times.</p>
                     </div>
+
                     <p class="tools-tag">Tools & Frameworks: Articulate Rise, Compliance Mapping, ADDIE</p>
-                    <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.5rem;">
-                        <a href="case-studies/compliance-lesson.html" class="btn">Read Case Study</a>
-                        <a href="rise-lesson/index.html" class="btn btn-outline" target="_blank">Launch Rise Module</a>
-                    </div>
                     
-                    <!-- Embedded Inline Compliance PDF -->
-                    <div style="border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb; height: 400px;">
-                        <object data="case-studies/compliance-risk-mitigation.pdf" type="application/pdf" width="100%" height="100%">
-                            <p>Your browser doesn't support embedding PDFs. <a href="case-studies/compliance-risk-mitigation.pdf">Click here to view it.</a></p>
-                        </object>
+                    <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.25rem;">
+                        <a href="case-studies/compliance-lesson.html" class="btn">Read Full Case Study</a>
+                        <a href="rise-lesson/index.html" class="btn btn-outline" target="_blank">Launch Rise Module ↗</a>
+                    </div>
+
+                    <div class="embed-wrapper">
+                        <!-- Embedded Articulate Rise Module -->
+                        <div class="embed-box">
+                            <div class="embed-header">
+                                <span>🖥️ Interactive Articulate Rise Module</span>
+                                <a href="rise-lesson/index.html" target="_blank">Full Screen ↗</a>
+                            </div>
+                            <iframe src="rise-lesson/index.html" class="embed-frame" height="520" loading="lazy" allowfullscreen></iframe>
+                        </div>
+
+                        <!-- Embedded Compliance PDF Document -->
+                        <div class="embed-box">
+                            <div class="embed-header">
+                                <span>📄 Compliance & Risk Mitigation Documentation</span>
+                                <a href="case-studies/compliance-risk-mitigation.pdf" target="_blank">Open / Download PDF ↗</a>
+                            </div>
+                            <iframe src="case-studies/compliance-risk-mitigation.pdf#view=FitH" class="embed-frame" height="450" loading="lazy">
+                                <p>Your browser does not support embedding PDFs. <a href="case-studies/compliance-risk-mitigation.pdf" target="_blank">Click here to view it directly.</a></p>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
 
-                                <!-- Case Study III -->
+                <!-- Case Study III -->
                 <div class="card">
                     <h3>Case Study III: Leadership & Compliance eLearning Module</h3>
+                    
                     <div class="card-details">
                         <p><strong>The Challenge:</strong> Traditional, passive compliance courses resulting in low situational retention and lack of behavioral alignment.</p>
                         <p><strong>The Solution:</strong> Produced an immersive branching-scenario curriculum that challenged leaders to navigate realistic administrative escalations with live feedback loops.</p>
                         <p><strong>Business Impact:</strong> Shifted training from passive reading to active, measurable critical-thinking assessment paths.</p>
                     </div>
+
                     <p class="tools-tag">Tools & Frameworks: Articulate 360, Branching Scenarios, Action Mapping</p>
-                    <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.5rem;">
-                        <a href="case-studies/compliance-lesson.html" class="btn">Read Case Study</a>
-                    </div>
                     
-                    <!-- Interactive Articulate Storyline Module Embed -->
-                    <div style="margin-top: 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb; background: #f9fafb;">
-                        <iframe src="compliance-lesson/content/index.html" width="100%" height="600px" style="border: none;"></iframe>
+                    <div class="btn-group" style="justify-content: flex-start; margin-bottom: 1.25rem;">
+                        <a href="case-studies/compliance-lesson.html" class="btn">Read Full Case Study</a>
+                        <a href="compliance-lesson/content/index.html" class="btn btn-outline" target="_blank">Launch Scenario Module ↗</a>
+                    </div>
+
+                    <div class="embed-wrapper">
+                        <!-- Embedded Interactive Articulate Storyline Module -->
+                        <div class="embed-box">
+                            <div class="embed-header">
+                                <span>🖥️ Interactive Scenario eLearning Module</span>
+                                <a href="compliance-lesson/content/index.html" target="_blank">Full Screen ↗</a>
+                            </div>
+                            <iframe src="compliance-lesson/content/index.html" class="embed-frame" height="580" loading="lazy" allowfullscreen></iframe>
+                        </div>
+
+                        <!-- Embedded Supporting Document PDF -->
+                        <div class="embed-box">
+                            <div class="embed-header">
+                                <span>📄 Instructional Design Storyboard & Guide</span>
+                                <a href="case-studies/compliance-risk-mitigation.pdf" target="_blank">Open / Download PDF ↗</a>
+                            </div>
+                            <iframe src="case-studies/compliance-risk-mitigation.pdf#view=FitH" class="embed-frame" height="450" loading="lazy">
+                                <p>Your browser does not support embedding PDFs. <a href="case-studies/compliance-risk-mitigation.pdf" target="_blank">Click here to view it directly.</a></p>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
 
